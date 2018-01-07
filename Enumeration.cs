@@ -1,7 +1,6 @@
 ﻿
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
@@ -31,17 +30,14 @@ namespace DAL.Enums
     }
     
     [DebuggerDisplay("{DisplayName} - {Value}")]
-    [DataContract(Namespace = "http://github.com/HeadspringLabs/Enumeration/5/13")]
     public abstract class Enumeration<TEnumeration, TValue> : IComparable<TEnumeration>, IEquatable<TEnumeration>
         where TEnumeration : Enumeration<TEnumeration, TValue>
         where TValue : IComparable
     {
         private static readonly Lazy<TEnumeration[]> Enumerations = new Lazy<TEnumeration[]>(GetEnumerations);
 
-        [DataMember(Order = 1)]
         readonly string _displayName;
 
-        [DataMember(Order = 0)]
         TValue _value;
         
         protected Enumeration(TValue value, string displayName)
