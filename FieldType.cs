@@ -193,7 +193,7 @@ namespace DAL.Enums
 
         //watch
         public static readonly AppIconFieldType AppIconIosAppIcon40x40_2x
-            = new AppIconFieldType.Ios(-32, "Ios icon-watch-40@2x", false, 190, true
+            = new AppIconFieldType.Ios(-33, "Ios icon-watch-40@2x", false, 190, true
                 , new Dictionary<string, string>{
                                         {"size", "40x40"},
                                         {"idiom", "watch"},
@@ -204,7 +204,7 @@ namespace DAL.Enums
                                     }, 80);
 
         public static readonly AppIconFieldType AppIconIosAppIcon44x44_2x
-            = new AppIconFieldType.Ios(-33, "Ios icon-watch-44@2x", false, 200, true
+            = new AppIconFieldType.Ios(-34, "Ios icon-watch-44@2x", false, 200, true
                 , new Dictionary<string, string>{
                                         {"size", "44x44"},
                                         {"idiom", "watch"},
@@ -215,7 +215,7 @@ namespace DAL.Enums
                                     }, 88);
 
         public static readonly AppIconFieldType AppIconIosAppIcon86x86_2x
-            = new AppIconFieldType.Ios(-34, "Ios icon-watch-86@2x", false, 210, true
+            = new AppIconFieldType.Ios(-35, "Ios icon-watch-86@2x", false, 210, true
                 , new Dictionary<string, string>{
                                         {"size", "86x86"},
                                         {"idiom", "watch"},
@@ -226,7 +226,7 @@ namespace DAL.Enums
                                     }, 172);
 
         public static readonly AppIconFieldType AppIconIosAppIcon98x98_2x
-            = new AppIconFieldType.Ios(-35, "Ios icon-watch-98@2x", false, 220, true
+            = new AppIconFieldType.Ios(-36, "Ios icon-watch-98@2x", false, 220, true
                 , new Dictionary<string, string>{
                                         {"size", "98x98"},
                                         {"idiom", "watch"},
@@ -237,7 +237,7 @@ namespace DAL.Enums
                                     }, 196);
 
         public static readonly AppIconFieldType AppIconIosAppIcon24x24_2x
-            = new AppIconFieldType.Ios(-36, "Ios icon-watch-24@2x", false, 230, true
+            = new AppIconFieldType.Ios(-37, "Ios icon-watch-24@2x", false, 230, true
                                    , new Dictionary<string, string>{
                                         {"size", "24x24"},
                                         {"idiom", "watch"},
@@ -248,7 +248,7 @@ namespace DAL.Enums
                                     }, 48);
 
         public static readonly AppIconFieldType AppIcon27_5x27_5_2x
-            = new AppIconFieldType.Ios(-37, "Ios icon-watch-27-5@2x", false, 240, true
+            = new AppIconFieldType.Ios(-38, "Ios icon-watch-27-5@2x", false, 240, true
                 , new Dictionary<string, string>{
                                         {"size", "27.5x27.5"},
                                         {"idiom", "watch"},
@@ -259,7 +259,7 @@ namespace DAL.Enums
                                     }, 55);
 
         public static readonly AppIconFieldType AppIcon29x29_2x
-            = new AppIconFieldType.Ios(-38, "Ios icon-watch-29@2x", false, 250, true
+            = new AppIconFieldType.Ios(-39, "Ios icon-watch-29@2x", false, 250, true
                 , new Dictionary<string, string>{
                                         {"size", "29x29"},
                                         {"idiom", "watch"},
@@ -269,7 +269,7 @@ namespace DAL.Enums
                                     }, 58);
 
         public static readonly AppIconFieldType AppIcon29x29_3x
-            = new AppIconFieldType.Ios(-39, "Ios icon-watch-29@3x", false, 260, true
+            = new AppIconFieldType.Ios(-40, "Ios icon-watch-29@3x", false, 260, true
                 , new Dictionary<string, string>{
                                         {"size", "29x29"},
                                         {"idiom", "watch"},
