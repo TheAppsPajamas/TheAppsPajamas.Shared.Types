@@ -81,7 +81,7 @@ namespace DAL.Enums
                                     }, 40);
 
         public static readonly AppIconFieldType AppIconIosIcon20_3x
-            = new AppIconFieldType.Ios(-40, "Ios icon-20@3x", false, 70, true
+            = new AppIconFieldType.Ios(-21, "Ios icon-20@3x", false, 70, true
                 , new Dictionary<string, string>{
                                         {"size", "20x20"},
                                         {"idiom", "iphone"},
