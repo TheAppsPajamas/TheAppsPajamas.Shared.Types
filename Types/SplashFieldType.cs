@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DAL.Enums
+namespace Build.Shared.Types
 {
     public class SplashFieldType : MasterMediaFieldType
     {

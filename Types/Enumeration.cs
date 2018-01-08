@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization;
 
-namespace DAL.Enums
+namespace Build.Shared.Types
 {
     
     [DebuggerDisplay("{DisplayName} - {Value}")]
