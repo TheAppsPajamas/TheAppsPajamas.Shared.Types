@@ -16,37 +16,37 @@ namespace Build.Shared.Types
         public static IEnumerable<TFieldType> Others<TFieldType>(this IEnumerable<TFieldType> fieldTypes)
             where TFieldType : MasterMediaFieldType
         {
-            return fieldTypes.Where(x => !x.IsMaster).OrderByDescending(x => x.Value);
+            return fieldTypes.Where(x => !x.IsMaster).OrderByDescending(x => x.Order);
         }
 
         public static IEnumerable<TFieldType> Shared<TFieldType>(this IEnumerable<TFieldType> fieldTypes)
             where TFieldType : FieldType
         {
-            return fieldTypes.Where(x => x.ProjectType == ProjectType.Shared).OrderByDescending(x => x.Value);
+            return fieldTypes.Where(x => x.ProjectType == ProjectType.Shared).OrderByDescending(x => x.Order);
         }
 
         public static IEnumerable<TFieldType> Ios<TFieldType>(this IEnumerable<TFieldType> fieldTypes)
              where TFieldType : FieldType
         {
-            return fieldTypes.Where(x => x.ProjectType == ProjectType.Ios).OrderByDescending(x => x.Value);
+            return fieldTypes.Where(x => x.ProjectType == ProjectType.Ios).OrderByDescending(x => x.Order);
         }
 
         public static IEnumerable<TFieldType> Droid<TFieldType>(this IEnumerable<TFieldType> fieldTypes)
               where TFieldType : FieldType
         {
-            return fieldTypes.Where(x => x.ProjectType == ProjectType.Droid).OrderByDescending(x => x.Value);
+            return fieldTypes.Where(x => x.ProjectType == ProjectType.Droid).OrderByDescending(x => x.Order);
         }
 
         public static IEnumerable<TFieldType> SharedOthers<TFieldType>(this IEnumerable<TFieldType> fieldTypes)
             where TFieldType : StringFieldType
         {
-            return fieldTypes.Where(x => x.IsShared).OrderByDescending(x => x.Value);
+            return fieldTypes.Where(x => x.IsShared).OrderByDescending(x => x.Order);
         }
 
         public static IEnumerable<TFieldType> NotSharedOthers<TFieldType>(this IEnumerable<TFieldType> fieldTypes)
             where TFieldType : StringFieldType
         {
-            return fieldTypes.Where(x => !x.IsShared).OrderByDescending(x => x.Value);
+            return fieldTypes.Where(x => !x.IsShared).OrderByDescending(x => x.Order);
         }
 
         public static string GetMetadata(this FieldType fieldType, string key)

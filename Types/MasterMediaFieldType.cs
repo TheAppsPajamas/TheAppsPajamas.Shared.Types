@@ -16,9 +16,10 @@ namespace Build.Shared.Types
             , bool isMaster
             , int order
             , bool isForClient
+            , bool isProdReady
             , Dictionary<string, string> metadata
             , int width
-            , int height = 0) : base(value, displayName, projectType, fieldHolderType, order, isForClient, metadata, width, height = 0)
+            , int height = 0) : base(value, displayName, projectType, fieldHolderType, order, isForClient, isProdReady, metadata, width, height = 0)
         {
             _isMaster = isMaster;
         }

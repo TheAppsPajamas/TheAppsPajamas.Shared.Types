@@ -18,9 +18,10 @@ namespace Build.Shared.Types
             , FieldHolderType fieldHolderType
             , int order
             , bool isForClient
+            , bool isProdReady
             , Dictionary<string, string> metadata
             , int width
-            , int height = 0) : base(value, displayName, projectType, fieldHolderType, order, isForClient, metadata)
+            , int height = 0) : base(value, displayName, projectType, fieldHolderType, order, isForClient, isProdReady, metadata)
         {
             _width = width;
             if (height == 0)

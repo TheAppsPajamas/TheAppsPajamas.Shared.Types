@@ -18,7 +18,8 @@ namespace Build.Shared.Types
             , bool isShared
             , int order
             , bool isForClient
-            , StringFieldDisplayType fieldDisplayType) : base(value, displayName, projectType, fieldHolderType, order, isForClient)
+            , bool isProdReady
+            , StringFieldDisplayType fieldDisplayType) : base(value, displayName, projectType, fieldHolderType, order, isForClient, isProdReady)
         {
             _isShared = isShared;
             _fieldDisplayType = fieldDisplayType;

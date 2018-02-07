@@ -12,9 +12,10 @@ namespace Build.Shared.Types
             , bool isMaster
             , int order
             , bool isForClient
+            , bool isProdReady
             , Dictionary<string, string> metadata
             , int width) 
-            : base(value, displayName, projectType, FieldHolderType.AppIcon, isMaster, order, isForClient, metadata, width)
+            : base(value, displayName, projectType, FieldHolderType.AppIcon, isMaster, order, isForClient, isProdReady, metadata, width)
         {
         }
 
@@ -25,9 +26,10 @@ namespace Build.Shared.Types
             , bool isMaster
             , int order
             , bool isForClient
+            , bool isProdReady
             , Dictionary<string, string> metadata
             , int width)
-                : base(value, displayName, ProjectType.Shared, isMaster, order, isForClient, metadata, width)
+                : base(value, displayName, ProjectType.Shared, isMaster, order, isForClient, isProdReady, metadata, width)
             {
             }
         }
@@ -39,9 +41,10 @@ namespace Build.Shared.Types
                 , bool isMaster
                 , int order
                 , bool isForClient
+                , bool isProdReady
                 , Dictionary<string, string> metadata
                 , int width)
-                : base(value, displayName, ProjectType.Droid, isMaster, order, isForClient, metadata, width)
+                : base(value, displayName, ProjectType.Droid, isMaster, order, isForClient,isProdReady,  metadata, width)
             {
             }
         }
@@ -53,9 +56,10 @@ namespace Build.Shared.Types
                 , bool isMaster
                 , int order
                 , bool isForClient
+                , bool isProdReady
                 , Dictionary<string, string> metadata
                 , int width)
-                : base(value, displayName, ProjectType.Ios, isMaster, order, isForClient, metadata, width)
+                : base(value, displayName, ProjectType.Ios, isMaster, order, isForClient, isProdReady, metadata, width)
             {
             }
         }

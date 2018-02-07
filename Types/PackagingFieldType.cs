@@ -13,7 +13,8 @@ namespace Build.Shared.Types
             , bool isShared
             , int order
             , bool isForClient
-            , StringFieldDisplayType fieldDisplayType) : base(value, displayName, projectType, FieldHolderType.Packaging, isShared, order, isForClient, fieldDisplayType)
+                , bool isProdReady
+            , StringFieldDisplayType fieldDisplayType) : base(value, displayName, projectType, FieldHolderType.Packaging, isShared, order, isForClient, isProdReady, fieldDisplayType)
         {
         }
 
@@ -24,8 +25,9 @@ namespace Build.Shared.Types
                 , bool isShared
                 , int order
                 , bool isForClient
+                , bool isProdReady
                 , StringFieldDisplayType fieldDisplayType)
-                : base(value, displayName, ProjectType.Shared, isShared, order, isForClient,fieldDisplayType)
+                : base(value, displayName, ProjectType.Shared, isShared, order, isForClient, isProdReady, fieldDisplayType)
             {
             }
         }
@@ -37,8 +39,9 @@ namespace Build.Shared.Types
                 , bool isShared
                 , int order
                 , bool isForClient
+                , bool isProdReady
                 , StringFieldDisplayType fieldDisplayType)
-                : base(value, displayName, ProjectType.Droid, isShared, order, isForClient, fieldDisplayType)
+                : base(value, displayName, ProjectType.Droid, isShared, order, isForClient, isProdReady, fieldDisplayType)
             {
             }
         }
@@ -50,8 +53,9 @@ namespace Build.Shared.Types
                 , int order
                 , bool isShared
                 , bool isForClient
+                , bool isProdReady
                 , StringFieldDisplayType fieldDisplayType)
-                : base(value, displayName, ProjectType.Ios, isShared, order, isForClient, fieldDisplayType)
+                : base(value, displayName, ProjectType.Ios, isShared, order, isForClient, isProdReady, fieldDisplayType)
             {
             }
         }
