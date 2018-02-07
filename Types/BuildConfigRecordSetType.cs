@@ -12,7 +12,8 @@ namespace Build.Shared.Types
             , int order
             , bool isForClient
             , bool isProdReady
-            , StringFieldDisplayType fieldDisplayType) : base(value, displayName, projectType, FieldHolderType.Packaging, true, order, isForClient, isProdReady, fieldDisplayType)
+            , StringFieldDisplayType fieldDisplayType
+            , string defaultValue) : base(value, displayName, projectType, FieldHolderType.Packaging, true, order, isForClient, isProdReady, fieldDisplayType, defaultValue)
         {
         }
 
@@ -23,8 +24,9 @@ namespace Build.Shared.Types
                 , int order
                 , bool isForClient
                 , bool isProdReady
-                , StringFieldDisplayType fieldDisplayType)
-                : base(value, displayName, ProjectType.Shared, order, isForClient, isProdReady, fieldDisplayType)
+                , StringFieldDisplayType fieldDisplayType
+                , string defaultValue)
+                : base(value, displayName, ProjectType.Shared, order, isForClient, isProdReady, fieldDisplayType, defaultValue)
             {
             }
         }

@@ -284,48 +284,48 @@ namespace Build.Shared.Types
 
         //packaging
         public static PackagingFieldType PackagingSharedName
-            = new PackagingFieldType(-50, "Shared name", ProjectType.Shared, true, 10, false, true, StringFieldDisplayType.Text);
+            = new PackagingFieldType(-50, "Shared name", ProjectType.Shared, true, 10, false, true, StringFieldDisplayType.Text, String.Empty);
         public static PackagingFieldType PackagingSharedIdentifier
-            = new PackagingFieldType(-51, "Shared identifier", ProjectType.Shared, true, 20, false, true, StringFieldDisplayType.Text);
+            = new PackagingFieldType(-51, "Shared identifier", ProjectType.Shared, true, 20, false, true, StringFieldDisplayType.Text, String.Empty);
         public static PackagingFieldType PackagingSharedVersionText
-            = new PackagingFieldType(-52, "Shared version", ProjectType.Shared, true, 30, false, true, StringFieldDisplayType.Text);
+            = new PackagingFieldType(-52, "Shared version", ProjectType.Shared, true, 30, false, true, StringFieldDisplayType.Text, String.Empty);
         public static PackagingFieldType PackagingSharedVersionNumber
-            = new PackagingFieldType(-53, "Shared version number", ProjectType.Shared, true, 40, false, true, StringFieldDisplayType.Number);
+            = new PackagingFieldType(-53, "Shared version number", ProjectType.Shared, true, 40, false, true, StringFieldDisplayType.Number, String.Empty);
 
 
         public static PackagingFieldType PackagingDroidName
-            = new PackagingFieldType(-54, "Droid name", ProjectType.Droid, true, 10, true, true, StringFieldDisplayType.Text);
+            = new PackagingFieldType(-54, "Droid name", ProjectType.Droid, true, 10, true, true, StringFieldDisplayType.Text, String.Empty);
         public static PackagingFieldType PackagingDroidIdentifier
-            = new PackagingFieldType(-55, "Droid identifier", ProjectType.Droid, true, 20, true, true, StringFieldDisplayType.Text);
+            = new PackagingFieldType(-55, "Droid identifier", ProjectType.Droid, true, 20, true, true, StringFieldDisplayType.Text, String.Empty);
         public static PackagingFieldType PackagingDroidVersionText
-            = new PackagingFieldType(-56, "Droid version", ProjectType.Droid, true, 30, true, true, StringFieldDisplayType.Text);
+            = new PackagingFieldType(-56, "Droid version", ProjectType.Droid, true, 30, true, true, StringFieldDisplayType.Text, String.Empty);
         public static PackagingFieldType PackagingDroidVersionNumber
-            = new PackagingFieldType(-57, "Droid version number", ProjectType.Droid, true, 40, true, true, StringFieldDisplayType.Number);
+            = new PackagingFieldType(-57, "Droid version number", ProjectType.Droid, true, 40, true, true, StringFieldDisplayType.Number, String.Empty);
         public static PackagingFieldType PackagingDroidAppIconName
-            = new PackagingFieldType(-63, "Droid app icon name", ProjectType.Droid, false, 50, true, true, StringFieldDisplayType.Text);
+            = new PackagingFieldType(-63, "Droid app icon name", ProjectType.Droid, false, 50, true, true, StringFieldDisplayType.Text, "ic_launcher");
         public static PackagingFieldType PackagingDroidSplashName
-            = new PackagingFieldType(-64, "Droid splash image name", ProjectType.Droid, false, 60, true, true, StringFieldDisplayType.Text);
+            = new PackagingFieldType(-64, "Droid splash image name", ProjectType.Droid, false, 60, true, true, StringFieldDisplayType.Text, "ic_splash");
 
         public static PackagingFieldType PackagingIosName
-            = new PackagingFieldType(-58, "Ios name", ProjectType.Ios, true, 10, true, true, StringFieldDisplayType.Text);
+            = new PackagingFieldType(-58, "Ios name", ProjectType.Ios, true, 10, true, true, StringFieldDisplayType.Text, String.Empty);
         public static PackagingFieldType PackagingIosIdentifier
-            = new PackagingFieldType(-59, "Ios identifier", ProjectType.Ios, true, 20, true, true, StringFieldDisplayType.Text);
+            = new PackagingFieldType(-59, "Ios identifier", ProjectType.Ios, true, 20, true, true, StringFieldDisplayType.Text, String.Empty);
         public static PackagingFieldType PackagingIosVersionText
-            = new PackagingFieldType(-60, "Ios version", ProjectType.Ios, true, 30, true, true, StringFieldDisplayType.Text);
+            = new PackagingFieldType(-60, "Ios version", ProjectType.Ios, true, 30, true, true, StringFieldDisplayType.Text, String.Empty);
         public static PackagingFieldType PackagingIosVersionNumber
-            = new PackagingFieldType(-61, "Ios version number", ProjectType.Ios, true, 40, true, true, StringFieldDisplayType.Number);
+            = new PackagingFieldType(-61, "Ios version number", ProjectType.Ios, true, 40, true, true, StringFieldDisplayType.Number, String.Empty);
         public static PackagingFieldType PackagingIosAssetCatalogueName
-            = new PackagingFieldType(-67, "Ios asset catalogue name", ProjectType.Ios, false, 50, true, true, StringFieldDisplayType.Text);
+            = new PackagingFieldType(-67, "Ios asset catalogue name", ProjectType.Ios, false, 50, true, true, StringFieldDisplayType.Text, "BuildAssets");
         public static PackagingFieldType PackagingIosAppIconXcAssetsName
-            = new PackagingFieldType(-65, "Ios app icon xcassets name", ProjectType.Ios, false, 60, true, true, StringFieldDisplayType.Text);
+            = new PackagingFieldType(-65, "Ios app icon xcassets name", ProjectType.Ios, false, 60, true, true, StringFieldDisplayType.Text, "AppIcon");
         public static PackagingFieldType PackagingIosLaunchImageXcAssetsName
-            = new PackagingFieldType(-66, "Ios launch image xcassets name", ProjectType.Ios, false, 70, true, true, StringFieldDisplayType.Text);
+            = new PackagingFieldType(-66, "Ios launch image xcassets name", ProjectType.Ios, false, 70, true, true, StringFieldDisplayType.Text, "Launch");
         public static PackagingFieldType PackagingIosUsesNonExemptEncryption
-            = new PackagingFieldType(-62, "Ios uses non exempt encryption", ProjectType.Ios, false, 80, true, true, StringFieldDisplayType.Bool);
+            = new PackagingFieldType(-62, "Ios uses non exempt encryption", ProjectType.Ios, false, 80, true, true, StringFieldDisplayType.Bool, "0");
 
 
         public static BuildConfigRecordSetType BuildConfigFieldSetCompilerConstants
-            = new BuildConfigRecordSetType(-70, "Compiler constants", ProjectType.Shared, 10, true, true, StringFieldDisplayType.Text);
+            = new BuildConfigRecordSetType(-70, "Compiler constants", ProjectType.Shared, 10, true, true, StringFieldDisplayType.Text, String.Empty);
 
         //splash
         public static readonly SplashFieldType SplashSharedMaster

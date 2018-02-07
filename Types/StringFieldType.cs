@@ -11,6 +11,10 @@ namespace Build.Shared.Types
 
         private bool _isShared;
         public bool IsShared { get { return _isShared;  } }
+
+        private string _defaultValue;
+        public string DefaultValue;
+
         public StringFieldType(int value
             , string displayName
             , ProjectType projectType
@@ -19,10 +23,12 @@ namespace Build.Shared.Types
             , int order
             , bool isForClient
             , bool isProdReady
-            , StringFieldDisplayType fieldDisplayType) : base(value, displayName, projectType, fieldHolderType, order, isForClient, isProdReady)
+            , StringFieldDisplayType fieldDisplayType
+            , string defaultValue) : base(value, displayName, projectType, fieldHolderType, order, isForClient, isProdReady)
         {
             _isShared = isShared;
             _fieldDisplayType = fieldDisplayType;
+            _defaultValue = defaultValue;
         }
 
     }

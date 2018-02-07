@@ -13,8 +13,10 @@ namespace Build.Shared.Types
             , bool isShared
             , int order
             , bool isForClient
-                , bool isProdReady
-            , StringFieldDisplayType fieldDisplayType) : base(value, displayName, projectType, FieldHolderType.Packaging, isShared, order, isForClient, isProdReady, fieldDisplayType)
+            , bool isProdReady
+            , StringFieldDisplayType fieldDisplayType
+            , string defaultValue) 
+            : base(value, displayName, projectType, FieldHolderType.Packaging, isShared, order, isForClient, isProdReady, fieldDisplayType, defaultValue)
         {
         }
 
@@ -26,8 +28,9 @@ namespace Build.Shared.Types
                 , int order
                 , bool isForClient
                 , bool isProdReady
-                , StringFieldDisplayType fieldDisplayType)
-                : base(value, displayName, ProjectType.Shared, isShared, order, isForClient, isProdReady, fieldDisplayType)
+                , StringFieldDisplayType fieldDisplayType
+                , string defaultValue
+                ) : base(value, displayName, ProjectType.Shared, isShared, order, isForClient, isProdReady, fieldDisplayType, defaultValue)
             {
             }
         }
@@ -40,8 +43,9 @@ namespace Build.Shared.Types
                 , int order
                 , bool isForClient
                 , bool isProdReady
-                , StringFieldDisplayType fieldDisplayType)
-                : base(value, displayName, ProjectType.Droid, isShared, order, isForClient, isProdReady, fieldDisplayType)
+                , StringFieldDisplayType fieldDisplayType
+                , string defaultValue
+                ) : base(value, displayName, ProjectType.Droid, isShared, order, isForClient, isProdReady, fieldDisplayType, defaultValue)
             {
             }
         }
@@ -54,8 +58,9 @@ namespace Build.Shared.Types
                 , bool isShared
                 , bool isForClient
                 , bool isProdReady
-                , StringFieldDisplayType fieldDisplayType)
-                : base(value, displayName, ProjectType.Ios, isShared, order, isForClient, isProdReady, fieldDisplayType)
+                , StringFieldDisplayType fieldDisplayType
+                , string defaultValue
+                ) : base(value, displayName, ProjectType.Ios, isShared, order, isForClient, isProdReady, fieldDisplayType, defaultValue)
             {
             }
         }
