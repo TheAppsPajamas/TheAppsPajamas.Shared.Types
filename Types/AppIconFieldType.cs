@@ -13,9 +13,10 @@ namespace Build.Shared.Types
             , int order
             , bool isForClient
             , bool isProdReady
+            , bool defaultToDisabled
             , Dictionary<string, string> metadata
             , int width) 
-            : base(value, displayName, projectType, FieldHolderType.AppIcon, isMaster, order, isForClient, isProdReady, metadata, width)
+            : base(value, displayName, projectType, FieldHolderType.AppIcon, isMaster, order, isForClient, isProdReady, defaultToDisabled, metadata, width)
         {
         }
 
@@ -27,9 +28,10 @@ namespace Build.Shared.Types
             , int order
             , bool isForClient
             , bool isProdReady
+            , bool defaultToDisabled
             , Dictionary<string, string> metadata
             , int width)
-                : base(value, displayName, ProjectType.Shared, isMaster, order, isForClient, isProdReady, metadata, width)
+                : base(value, displayName, ProjectType.Shared, isMaster, order, isForClient, isProdReady, defaultToDisabled, metadata, width)
             {
             }
         }
@@ -42,9 +44,10 @@ namespace Build.Shared.Types
                 , int order
                 , bool isForClient
                 , bool isProdReady
+                , bool defaultToDisabled
                 , Dictionary<string, string> metadata
                 , int width)
-                : base(value, displayName, ProjectType.Droid, isMaster, order, isForClient,isProdReady,  metadata, width)
+                : base(value, displayName, ProjectType.Droid, isMaster, order, isForClient, isProdReady,  defaultToDisabled, metadata, width)
             {
             }
         }
@@ -57,9 +60,10 @@ namespace Build.Shared.Types
                 , int order
                 , bool isForClient
                 , bool isProdReady
+                , bool defaultToDisabled
                 , Dictionary<string, string> metadata
                 , int width)
-                : base(value, displayName, ProjectType.Ios, isMaster, order, isForClient, isProdReady, metadata, width)
+                : base(value, displayName, ProjectType.Ios, isMaster, order, isForClient, isProdReady, defaultToDisabled, metadata, width)
             {
             }
         }
