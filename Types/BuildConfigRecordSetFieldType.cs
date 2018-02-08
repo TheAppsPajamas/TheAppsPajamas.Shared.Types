@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Build.Shared.Types
 {
-    public class BuildConfigRecordSetType : StringFieldType
+    public class BuildConfigRecordSetFieldType : StringFieldType
     {
-        public BuildConfigRecordSetType(int value
+        public BuildConfigRecordSetFieldType(int value
             , string displayName
             , ProjectType projectType
             , int order
@@ -17,7 +17,7 @@ namespace Build.Shared.Types
         {
         }
 
-        public class Shared : BuildConfigRecordSetType
+        public class Shared : BuildConfigRecordSetFieldType
         {
             public Shared(int value
                 , string displayName

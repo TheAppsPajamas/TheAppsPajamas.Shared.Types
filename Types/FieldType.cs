@@ -324,8 +324,8 @@ namespace Build.Shared.Types
             = new PackagingFieldType(-62, "Ios uses non exempt encryption", ProjectType.Ios, false, 80, true, true, StringFieldDisplayType.Bool, "0");
 
 
-        public static BuildConfigRecordSetType BuildConfigFieldSetCompilerConstants
-            = new BuildConfigRecordSetType(-70, "Compiler constants", ProjectType.Shared, 10, true, true, StringFieldDisplayType.Text, String.Empty);
+        public static BuildConfigRecordSetFieldType BuildConfigFieldSetCompilerConstants
+            = new BuildConfigRecordSetFieldType(-70, "Compiler constants", ProjectType.Shared, 10, true, true, StringFieldDisplayType.Text, String.Empty);
 
         //splash
         public static readonly SplashFieldType SplashSharedMaster
@@ -368,9 +368,9 @@ namespace Build.Shared.Types
             return ret;
         }
 
-        public static IEnumerable<BuildConfigRecordSetType> BuildConfigRecordSet()
+        public static IEnumerable<BuildConfigRecordSetFieldType> BuildConfigRecordSet()
         {
-            var ret = GetAllOf<BuildConfigRecordSetType>().Where(x => x.IsProdReady == true).OrderByDescending(x => x.Order);
+            var ret = GetAllOf<BuildConfigRecordSetFieldType>().Where(x => x.IsProdReady == true).OrderByDescending(x => x.Order);
             return ret;
         }
 
