@@ -27,9 +27,13 @@ namespace Build.Shared.Types
 
         public Dictionary<string, string> Metadata;
 
+        #region AppIconShared
         public static readonly AppIconFieldType AppIconSharedMaster
             = new AppIconFieldType.Shared(-1, "Shared master app icon", true, 10, false, true, false, null, 1024);
 
+        #endregion
+
+        #region AppIconDroid
         public static readonly AppIconFieldType AppIconDroidMaster
             = new AppIconFieldType.Droid(-5, "Droid master app icon", true, 10, false, true, false, null, 1024);
         public static readonly AppIconFieldType AppIconDroidPlaystore
@@ -47,6 +51,9 @@ namespace Build.Shared.Types
         public static readonly AppIconFieldType AppIconDroidXxxhdpi
         = new AppIconFieldType.Droid(-12, "Droid xxxhdpi app icon", false, 80, true, true, false, new Dictionary<string, string> { { "folder", "mipmap-xxxhdpi" } }, 192);
 
+        #endregion
+
+        #region AppIconIos
         public static readonly AppIconFieldType AppIconIosMaster
         = new AppIconFieldType.Ios(-15, "Ios master app icon", true, 10, false, true, false, null, 1024);
 
@@ -197,7 +204,7 @@ namespace Build.Shared.Types
                                         { "osFileName", "Icon-Small@3x.png" }
                                     }, 87);
 
-        //watch
+        #region watch
         public static readonly AppIconFieldType AppIconIosAppIcon40x40_2x
             = new AppIconFieldType.Ios(-33, "Ios icon-watch-40@2x", false, 190, true, true, false
                 , new Dictionary<string, string>{
@@ -284,8 +291,10 @@ namespace Build.Shared.Types
                                         { "osFileName", "AppIcon29x29@3x.png" }
                                     }, 87);
 
+        #endregion
+        #endregion
 
-        //packaging
+        #region Packaging
         public static PackagingFieldType PackagingSharedName
             = new PackagingFieldType(-50, "Shared name", ProjectType.Shared, true, 10, false, true, false, StringFieldDisplayType.Text, String.Empty);
         public static PackagingFieldType PackagingSharedIdentifier
@@ -326,21 +335,199 @@ namespace Build.Shared.Types
         public static PackagingFieldType PackagingIosUsesNonExemptEncryption
             = new PackagingFieldType(-62, "Ios uses non exempt encryption", ProjectType.Ios, false, 80, true, true, false, StringFieldDisplayType.Bool, "0");
 
+        #endregion
+
+        #region BuildConfig
 
         public static BuildConfigRecordSetFieldType BuildConfigFieldSetCompilerConstants
             = new BuildConfigRecordSetFieldType(-70, "Compiler constants", ProjectType.Shared, 10, true, true, false, StringFieldDisplayType.Text, String.Empty);
 
-        //splash
+        #endregion
+
+        #region SplashShared
         public static readonly SplashFieldType SplashSharedMaster
             = new SplashFieldType.Shared(-80, "Shared master splash screen", true, 10, false, true, false, null, 2048, 2048);
 
+        #endregion
+
+        #region SplashDroid
         public static readonly SplashFieldType SplashDroidMaster
             = new SplashFieldType.Droid(-85, "Droid master splash screen", true, 10, false, true, false, null, 2048, 2048);
+
+        #region SplashDroidPortrait
+        public static readonly SplashFieldType SplashDroidDrawable
+            = new SplashFieldType.Droid(value: -1200, displayName: "Droid drawable portrait splash screen"
+                , isMaster: false, order: 20, isForClient: true, isProdReady: false, defaultToDisabled: false
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable" }
+                } , width: 480, height: 800);
+
+        public static readonly SplashFieldType SplashDroidDrawableLdpi
+            = new SplashFieldType.Droid(value: -1201, displayName: "Droid drawable portrait ldpi splash screen"
+                , isMaster: false, order: 20, isForClient: true, isProdReady: false, defaultToDisabled: false
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-ldpi" }
+                }, width: 200, height: 320);
+
+        public static readonly SplashFieldType SplashDroidDrawableMdpi
+            = new SplashFieldType.Droid(value: -1202, displayName: "Droid drawable portrait mdpi splash screen"
+                , isMaster: false, order: 30, isForClient: true, isProdReady: false, defaultToDisabled: false
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-mdpi" }
+                }, width: 320, height: 480);
+
+        public static readonly SplashFieldType SplashDroidDrawableHdpi
+            = new SplashFieldType.Droid(value: -1203, displayName: "Droid drawable portrait hpi splash screen"
+                , isMaster: false, order: 40, isForClient: true, isProdReady: false, defaultToDisabled: false
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-hdpi" }
+                }, width: 480, height: 800);
+
+        public static readonly SplashFieldType SplashDroidDrawableXhdpi
+            = new SplashFieldType.Droid(value: -1204, displayName: "Droid drawable portrait xhdpi splash screen"
+                , isMaster: false, order: 50, isForClient: true, isProdReady: false, defaultToDisabled: false
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-xhdpi" }
+                }, width: 720, height: 1280);
+
+        public static readonly SplashFieldType SplashDroidDrawableXxhdpi
+            = new SplashFieldType.Droid(value: -1205, displayName: "Droid drawable portrait xxhdpi splash screen"
+                , isMaster: false, order: 60, isForClient: true, isProdReady: false, defaultToDisabled: false
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-xxhdpi" }
+                }, width: 960, height: 1600);
+
+        public static readonly SplashFieldType SplashDroidDrawableXxxhdpi
+            = new SplashFieldType.Droid(value: -1206, displayName: "Droid drawable portrait xxxhdpi splash screen"
+                , isMaster: false, order: 70, isForClient: true, isProdReady: false, defaultToDisabled: false
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-xxxhdpi" }
+                }, width: 1280, height: 1920);
+
+
+        #endregion
+
+        #region SplashDroidPortraitOptional
+        public static readonly SplashFieldType SplashDroidDrawableSw480dpMdpi
+            = new SplashFieldType.Droid(value: -1300, displayName: "Droid drawable portrait sw480dp mdpi splash screen"
+                , isMaster: false, order: 200, isForClient: true, isProdReady: false, defaultToDisabled: true
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-sw480dp-mdpi" }
+                }, width: 480, height: 800);
+
+        public static readonly SplashFieldType SplashDroidDrawableSw600dpMdpi
+            = new SplashFieldType.Droid(value: -1301, displayName: "Droid drawable portrait sw600dp mdpi splash screen"
+                , isMaster: false, order: 210, isForClient: true, isProdReady: false, defaultToDisabled: true
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-sw600dp-mdpi" }
+                }, width: 600, height: 1024);
+
+        public static readonly SplashFieldType SplashDroidDrawableSw720dpMdpi
+            = new SplashFieldType.Droid(value: -1302, displayName: "Droid drawable portrait sw720dp mdpi splash screen"
+                , isMaster: false, order: 220, isForClient: true, isProdReady: false, defaultToDisabled: true
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-sw720dp-mdpi" }
+                }, width: 720, height: 1280);
+
+        public static readonly SplashFieldType SplashDroidDrawableSw800dpMdpi
+            = new SplashFieldType.Droid(value: -1303, displayName: "Droid drawable portrait sw800dp mdpi splash screen"
+                , isMaster: false, order: 230, isForClient: true, isProdReady: false, defaultToDisabled: true
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-sw800dp-mdpi" }
+                }, width: 800, height: 1280);
+        #endregion
+
+        #region SplashDroidLandscape
+        public static readonly SplashFieldType SplashDroidDrawableLand
+            = new SplashFieldType.Droid(value: -1400, displayName: "Droid drawable landscape splash screen"
+                , isMaster: false, order: 500, isForClient: true, isProdReady: false, defaultToDisabled: false
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-land" }
+                }, width: 800, height: 480);
+
+        public static readonly SplashFieldType SplashDroidDrawableLandLdpi
+            = new SplashFieldType.Droid(value: -1401, displayName: "Droid drawable landscape ldpi splash screen"
+                , isMaster: false, order: 510, isForClient: true, isProdReady: false, defaultToDisabled: false
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-land-ldpi" }
+                }, width: 320, height: 200);
+
+        public static readonly SplashFieldType SplashDroidDrawableLandMdpi
+            = new SplashFieldType.Droid(value: -1402, displayName: "Droid drawable landscape mdpi splash screen"
+                , isMaster: false, order: 520, isForClient: true, isProdReady: false, defaultToDisabled: false
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-land-mdpi" }
+                }, width: 480, height: 320);
+
+        public static readonly SplashFieldType SplashDroidDrawableLandHdpi
+            = new SplashFieldType.Droid(value: -1403, displayName: "Droid drawable landscape hdpi splash screen"
+                , isMaster: false, order: 530, isForClient: true, isProdReady: false, defaultToDisabled: false
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-land-hdpi" }
+                }, width: 800, height: 480);
+
+        public static readonly SplashFieldType SplashDroidDrawableLandXhdpi
+            = new SplashFieldType.Droid(value: -1404, displayName: "Droid drawable landscape xhdpi splash screen"
+                , isMaster: false, order: 540, isForClient: true, isProdReady: false, defaultToDisabled: false
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-land-xhdpi" }
+                }, width: 1280, height: 720);
+
+        public static readonly SplashFieldType SplashDroidDrawableLandXxhdpi
+            = new SplashFieldType.Droid(value: -1405, displayName: "Droid drawable landscape xxhdpi splash screen"
+                , isMaster: false, order: 550, isForClient: true, isProdReady: false, defaultToDisabled: false
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-land-xxhdpi" }
+                }, width: 1600, height: 960);
+
+        public static readonly SplashFieldType SplashDroidDrawableLandXxxhdpi
+            = new SplashFieldType.Droid(value: -1405, displayName: "Droid drawable landscape xxxhdpi splash screen"
+                , isMaster: false, order: 560, isForClient: true, isProdReady: false, defaultToDisabled: false
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-land-xxxhdpi" }
+                }, width: 1920, height: 1280);
+
+
+        #endregion
+
+        #region SplashDroidLandscapeOptional
+        public static readonly SplashFieldType SplashDroidDrawableLandSw480dpMdpi
+            = new SplashFieldType.Droid(value: -1500, displayName: "Droid drawable landscape sw480dp mdpi splash screen"
+                , isMaster: false, order: 200, isForClient: true, isProdReady: false, defaultToDisabled: true
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-sw480dp-land-mdpi" }
+                }, width: 800, height: 480);
+
+        public static readonly SplashFieldType SplashDroidDrawableLandSw600dpMdpi
+            = new SplashFieldType.Droid(value: -1501, displayName: "Droid drawable landscape sw600dp mdpi splash screen"
+                , isMaster: false, order: 210, isForClient: true, isProdReady: false, defaultToDisabled: true
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-sw600dp-land-mdpi" }
+                }, width: 1024, height: 600);
+
+        public static readonly SplashFieldType SplashDroidDrawableLandSw720dpMdpi
+            = new SplashFieldType.Droid(value: -1502, displayName: "Droid drawable landscape sw720dp mdpi splash screen"
+                , isMaster: false, order: 220, isForClient: true, isProdReady: false, defaultToDisabled: true
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-sw720dp-land-mdpi" }
+                }, width: 1280, height: 720);
+
+        public static readonly SplashFieldType SplashDroidDrawableLandSw800dpMdpi
+            = new SplashFieldType.Droid(value: -1503, displayName: "Droid drawable landscape sw800dp mdpi splash screen"
+                , isMaster: false, order: 230, isForClient: true, isProdReady: false, defaultToDisabled: true
+                , metadata: new Dictionary<string, string> {
+                    { "folder", "drawable-sw800dp-land-mdpi" }
+                }, width: 1280, height: 800);
+        #endregion
+
+        #endregion
+
+        #region SplashIos
 
         public static readonly SplashFieldType SplashIosMaster
             = new SplashFieldType.Ios(-125, "Ios master splash screen", true, 10, false, true, false, null, 2048, 2048);
 
-
+        #endregion
 
         protected FieldType(int value
             , string displayName

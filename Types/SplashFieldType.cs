@@ -17,7 +17,7 @@ namespace Build.Shared.Types
             , Dictionary<string, string> metadata
             , int width
             , int height) 
-            : base(value, displayName, projectType, FieldHolderType.AppIcon, isMaster, order, isForClient, isProdReady, defaultToDisabled, metadata, width, height)
+            : base(value, displayName, projectType, FieldHolderType.Splash, isMaster, order, isForClient, isProdReady, defaultToDisabled, metadata, width, height)
         {
         }
 
