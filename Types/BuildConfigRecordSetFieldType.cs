@@ -14,7 +14,7 @@ namespace Build.Shared.Types
             , bool isProdReady
             , bool defaultToDisabled
             , StringFieldDisplayType fieldDisplayType
-            , string defaultValue) : base(value, displayName, projectType, FieldHolderType.Packaging, true, order, isForClient, isProdReady, defaultToDisabled, fieldDisplayType, defaultValue)
+            , string defaultValue) : base(value, displayName, projectType, FieldHolderType.Packaging, order, isForClient, isProdReady, defaultToDisabled, null, fieldDisplayType, defaultValue)
         {
         }
 

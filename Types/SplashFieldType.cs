@@ -4,14 +4,11 @@ using System.Text;
 
 namespace Build.Shared.Types
 {
-    public class SplashFieldType : MasterMediaFieldType
+    public class SplashFieldType : MediaFieldType
     {
         private MediaOrientationType _mediaOrientationType;
         public MediaOrientationType MediaOrientationType {  get { return _mediaOrientationType;  } }
-
-        private SplashFieldType _inheritsFromDefault;
-        public SplashFieldType InheritsFromDefault;
-
+        
         public SplashFieldType(int value
             , string displayName
             , ProjectType projectType
@@ -32,12 +29,12 @@ namespace Build.Shared.Types
                       , isForClient: isForClient
                       , isProdReady: isProdReady
                       , defaultToDisabled: defaultToDisabled
+                      , inheritsFromDefault: inheritsFromDefault
                       , metadata: metadata
                       , width: width
                       , height: height)
         {
             _mediaOrientationType = mediaOrientationType;
-            _inheritsFromDefault = inheritsFromDefault;
         }
 
         public class Shared : SplashFieldType

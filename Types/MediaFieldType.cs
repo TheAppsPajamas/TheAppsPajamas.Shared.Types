@@ -11,7 +11,7 @@ namespace Build.Shared.Types
 
         private int _height;
         public virtual int Height { get { return _height; } }
-
+        
         public MediaFieldType(int value
             , string displayName
             , ProjectType projectType
@@ -20,9 +20,10 @@ namespace Build.Shared.Types
             , bool isForClient
             , bool isProdReady
             , bool defaultToDisabled
+            , MediaFieldType inheritsFromDefault
             , Dictionary<string, string> metadata
             , int width
-            , int height = 0) : base(value, displayName, projectType, fieldHolderType, order, isForClient, isProdReady, defaultToDisabled, metadata)
+            , int height = 0) : base(value, displayName, projectType, fieldHolderType, order, isForClient, isProdReady, defaultToDisabled, inheritsFromDefault, metadata)
         {
             _width = width;
             if (height == 0)

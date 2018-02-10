@@ -87,6 +87,25 @@ namespace Build.Shared.Types
                 .ToArray();
         }
 
+        [Conditional("DEBUG")]
+        public static void TestAll()
+        {
+            var enumerations = GetAll();
+            var possibleDuplicates = enumerations.GroupBy(x => x.Value)
+                        .Select(x => new {
+                            Count = x.Count(),
+                            Value = x.Key
+                        })
+                        .OrderByDescending(x => x.Count);
+
+            var duplicates = possibleDuplicates.Where(x => x.Count > 1).ToList();
+            if (duplicates.Any())
+            {
+                var firstDuplicate = duplicates.FirstOrDefault();
+                throw new Exception($"Duplicated Value found Enumeration Type {enumerations.FirstOrDefault().GetType().FullName} for Value {firstDuplicate.Value}");
+            }
+
+        }
         public static IEnumerable<TTypeOut> GetAllOf<TTypeOut>()
         {
             Type enumerationType = typeof(TEnumeration);
@@ -98,20 +117,7 @@ namespace Build.Shared.Types
                 .Select(info => info.GetValue(null))
                 .Cast<TTypeOut>();
         }
-
-        public TEnumeration[] GetAllOfC(Type enumerationType)
-        {
-            //Type enumerationType = typeof(t);
-
-            Type enumerationTypeOut = typeof(TEnumeration);
-            return enumerationType
-                .GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.DeclaredOnly)
-                .Where(info => enumerationTypeOut.IsAssignableFrom(info.FieldType))
-                .Select(info => info.GetValue(null))
-                .Cast<TEnumeration>()
-                .ToArray();
-        }
-
+        
         public override bool Equals(object obj)
         {
             return Equals(obj as TEnumeration);

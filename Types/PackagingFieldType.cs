@@ -10,14 +10,14 @@ namespace Build.Shared.Types
         public PackagingFieldType(int value
             , string displayName
             , ProjectType projectType
-            , bool isShared
             , int order
             , bool isForClient
             , bool isProdReady
             , bool defaultToDisabled
+            , PackagingFieldType inheritsFromDefault
             , StringFieldDisplayType fieldDisplayType
             , string defaultValue) 
-            : base(value, displayName, projectType, FieldHolderType.Packaging, isShared, order, isForClient, isProdReady, defaultToDisabled, fieldDisplayType, defaultValue)
+            : base(value, displayName, projectType, FieldHolderType.Packaging, order, isForClient, isProdReady, defaultToDisabled, inheritsFromDefault, fieldDisplayType, defaultValue)
         {
         }
 
@@ -25,14 +25,14 @@ namespace Build.Shared.Types
         {
             public Shared(int value
                 , string displayName
-                , bool isShared
                 , int order
                 , bool isForClient
                 , bool isProdReady
                 , bool defaultToDisabled
+                , PackagingFieldType inheritsFromDefault
                 , StringFieldDisplayType fieldDisplayType
                 , string defaultValue
-                ) : base(value, displayName, ProjectType.Shared, isShared, order, isForClient, isProdReady, defaultToDisabled, fieldDisplayType, defaultValue)
+                ) : base(value, displayName, ProjectType.Shared, order, isForClient, isProdReady, defaultToDisabled, inheritsFromDefault, fieldDisplayType, defaultValue)
             {
             }
         }
@@ -41,14 +41,14 @@ namespace Build.Shared.Types
         {
             public Droid(int value
                 , string displayName
-                , bool isShared
                 , int order
                 , bool isForClient
                 , bool isProdReady
                 , bool defaultToDisabled
+                , PackagingFieldType inheritsFromDefault
                 , StringFieldDisplayType fieldDisplayType
                 , string defaultValue
-                ) : base(value, displayName, ProjectType.Droid, isShared, order, isForClient, isProdReady, defaultToDisabled, fieldDisplayType, defaultValue)
+                ) : base(value, displayName, ProjectType.Droid, order, isForClient, isProdReady, defaultToDisabled, inheritsFromDefault, fieldDisplayType, defaultValue)
             {
             }
         }
@@ -58,13 +58,13 @@ namespace Build.Shared.Types
             public Ios(int value
                 , string displayName
                 , int order
-                , bool isShared
                 , bool isForClient
                 , bool isProdReady
                 , bool defaultToDisabled
+                , PackagingFieldType inheritsFromDefault
                 , StringFieldDisplayType fieldDisplayType
                 , string defaultValue
-                ) : base(value, displayName, ProjectType.Ios, isShared, order, isForClient, isProdReady, defaultToDisabled, fieldDisplayType, defaultValue)
+                ) : base(value, displayName, ProjectType.Ios, order, isForClient, isProdReady, defaultToDisabled, inheritsFromDefault, fieldDisplayType, defaultValue)
             {
             }
         }
