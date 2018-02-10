@@ -6,6 +6,9 @@ namespace Build.Shared.Types
 {
     public class AppIconFieldType : MasterMediaFieldType
     {
+        private bool _isMaster;
+        public virtual bool IsMaster { get { return _isMaster; } }
+
         public AppIconFieldType(int value
             , string displayName
             , ProjectType projectType
@@ -16,8 +19,9 @@ namespace Build.Shared.Types
             , bool defaultToDisabled
             , Dictionary<string, string> metadata
             , int width) 
-            : base(value, displayName, projectType, FieldHolderType.AppIcon, isMaster, order, isForClient, isProdReady, defaultToDisabled, metadata, width)
+            : base(value, displayName, projectType, FieldHolderType.AppIcon, order, isForClient, isProdReady, defaultToDisabled, metadata, width)
         {
+            _isMaster = isMaster;
         }
 
         public class Shared : AppIconFieldType

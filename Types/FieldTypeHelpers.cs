@@ -8,13 +8,13 @@ namespace Build.Shared.Types
     public static class FieldTypeHelpers
     {
         public static TFieldType Master<TFieldType>(this IEnumerable<TFieldType> fieldTypes)
-            where TFieldType : MasterMediaFieldType
+            where TFieldType : AppIconFieldType
         {
             return fieldTypes.FirstOrDefault(x => x.IsMaster);
         }
 
         public static IEnumerable<TFieldType> Others<TFieldType>(this IEnumerable<TFieldType> fieldTypes)
-            where TFieldType : MasterMediaFieldType
+            where TFieldType : AppIconFieldType
         {
             return fieldTypes.Where(x => !x.IsMaster).OrderByDescending(x => x.Order);
         }
