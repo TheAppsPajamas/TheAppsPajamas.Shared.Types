@@ -73,11 +73,11 @@ namespace Build.Shared.Types
 
         public static readonly AppIconFieldType AppIconIosITunesArtwork
             = new AppIconFieldType.Ios(-205, "Ios iTunesArtwork", 20, true, true, false, AppIconIosMaster
-                , new Dictionary<string, string> { { "osFileName", "iTunesArtwork" } }, 512);
+                , new Dictionary<string, string> { { "filename", "iTunesArtwork" } }, 512);
 
         public static readonly AppIconFieldType AppIconIosITunesArtwork_2x
             = new AppIconFieldType.Ios(-210, "Ios iTunesArtwork@2x", 30, true, true, false, AppIconIosMaster
-                , new Dictionary<string, string> { { "osFileName", "iTunesArtwork" } }, 1024);
+                , new Dictionary<string, string> { { "filename", "iTunesArtwork" } }, 1024);
 
         public static readonly AppIconFieldType AppIconIosMarketingIcon
             = new AppIconFieldType.Ios(-215, "Ios marketing icon", 40, true, true, false, AppIconIosMaster
@@ -85,7 +85,7 @@ namespace Build.Shared.Types
                                         {"size", "1024x1024"},
                                         {"idiom", "ios-marketing"},
                                         {"scale", "1x"},
-                                        { "osFileName", "Icon-Marketing.png" }
+                                        { "filename", "Icon-Marketing.png" }
                                     }, 1024);
 
         public static readonly AppIconFieldType AppIconIosIcon20_1x
@@ -94,7 +94,7 @@ namespace Build.Shared.Types
                                         {"size", "20x20"},
                                         {"idiom", "ipad"},
                                         {"scale", "1x"},
-                                        { "osFileName", "Icon-20@1x.png" }
+                                        { "filename", "Icon-20@1x.png" }
                                     }, 20);
 
         public static readonly AppIconFieldType AppIconIosIcon20_2x
@@ -104,7 +104,7 @@ namespace Build.Shared.Types
                                         {"idiom", "iphone"},
                                         {"idiom2", "ipad"},
                                         {"scale", "2x"},
-                                        { "osFileName", "Icon-20@2x.png" }
+                                        { "filename", "Icon-20@2x.png" }
                                     }, 40);
 
         public static readonly AppIconFieldType AppIconIosIcon20_3x
@@ -113,7 +113,7 @@ namespace Build.Shared.Types
                                         {"size", "20x20"},
                                         {"idiom", "iphone"},
                                         {"scale", "3x"},
-                                        { "osFileName", "Icon-20@3x.png" }
+                                        { "filename", "Icon-20@3x.png" }
                                     }, 60);
 
         public static readonly AppIconFieldType AppIconIosIcon60_2x
@@ -122,7 +122,7 @@ namespace Build.Shared.Types
                                         {"size", "60x60"},
                                         {"idiom", "iphone"},
                                         {"scale", "2x"},
-                                        { "osFileName", "Icon-60@2x.png" }
+                                        { "filename", "Icon-60@2x.png" }
                                     }, 120);
 
         public static readonly AppIconFieldType AppIconIosIcon60_3x
@@ -131,7 +131,7 @@ namespace Build.Shared.Types
                                         {"size", "60x60"},
                                         {"idiom", "iphone"},
                                         {"scale", "3x"},
-                                        { "osFileName", "Icon-60@3x.png" }
+                                        { "filename", "Icon-60@3x.png" }
                                     }, 180);
 
         public static readonly AppIconFieldType AppIconIosIcon76
@@ -140,7 +140,7 @@ namespace Build.Shared.Types
                                         {"size", "76x76"},
                                         {"idiom", "ipad"},
                                         {"scale", "1x"},
-                                        { "osFileName", "Icon-76.png" }
+                                        { "filename", "Icon-76.png" }
                                     }, 76);
 
         public static readonly AppIconFieldType AppIconIosIcon76_2x
@@ -149,7 +149,7 @@ namespace Build.Shared.Types
                                         {"size", "76x76"},
                                         {"idiom", "ipad"},
                                         {"scale", "2x"},
-                                        { "osFileName", "Icon-76@2x.png" }
+                                        { "filename", "Icon-76@2x.png" }
                                     }, 152);
 
         public static readonly AppIconFieldType AppIconIosIcon83_5_2x
@@ -158,7 +158,7 @@ namespace Build.Shared.Types
                                         {"size", "83.5x83.5"},
                                         {"idiom", "ipad"},
                                         {"scale", "2x"},
-                                        { "osFileName", "Icon-83.5@2x.png" }
+                                        { "filename", "Icon-83.5@2x.png" }
                                     }, 167);
 
         public static readonly AppIconFieldType AppIconIosIconSmall40
@@ -167,7 +167,7 @@ namespace Build.Shared.Types
                                         {"size", "40x40"},
                                         {"idiom", "ipad"},
                                         {"scale", "1x"},
-                                        { "osFileName", "Icon-Small-40.png" }
+                                        { "filename", "Icon-Small-40.png" }
                                     }, 40);
 
         public static readonly AppIconFieldType AppIconIosIconSmall40_2x
@@ -177,7 +177,7 @@ namespace Build.Shared.Types
                                         {"idiom", "iphone"},
                                         {"scale", "2x"},
                                         {"idiom2", "ipad"},
-                                        { "osFileName", "Icon-Small-40@2x.png" }
+                                        { "filename", "Icon-Small-40@2x.png" }
                                     }, 80);
 
         public static readonly AppIconFieldType AppIconIosIconSmall40_3x
@@ -186,7 +186,7 @@ namespace Build.Shared.Types
                                         {"size", "40x40"},
                                         {"idiom", "iphone"},
                                         {"scale", "3x"},
-                                        { "osFileName", "Icon-Small-40@3x.png" }
+                                        { "filename", "Icon-Small-40@3x.png" }
                                     }, 120);
 
         public static readonly AppIconFieldType AppIconIosIconSmall
@@ -195,7 +195,7 @@ namespace Build.Shared.Types
                                         {"size", "29x29"},
                                         {"idiom", "ipad"},
                                         {"scale", "1x"},
-                                        { "osFileName", "Icon-Small.png" }
+                                        { "filename", "Icon-Small.png" }
                                     }, 29);
 
         public static readonly AppIconFieldType AppIconIosIconSmall_2x
@@ -205,7 +205,7 @@ namespace Build.Shared.Types
                                         {"idiom", "iphone"},
                                         {"scale", "2x"},
                                         {"idiom2", "ipad"},
-                                        { "osFileName", "Icon-Small@2x.png" }
+                                        { "filename", "Icon-Small@2x.png" }
                                     }, 58);
 
         public static readonly AppIconFieldType AppIconIosIconSmall_3x
@@ -215,7 +215,7 @@ namespace Build.Shared.Types
                                         {"idiom", "iphone"},
                                         {"scale", "3x"},
                                         {"idiom2", "ipad"},
-                                        { "osFileName", "Icon-Small@3x.png" }
+                                        { "filename", "Icon-Small@3x.png" }
                                     }, 87);
 
         #region watch
@@ -227,7 +227,7 @@ namespace Build.Shared.Types
                                         {"scale", "2x"},
                                         { "role", "appLauncher" },
                                         { "subtype", "38mm" },
-                                        { "osFileName", "AppIcon40x40@2x.png" }
+                                        { "filename", "AppIcon40x40@2x.png" }
                                     }, 80);
 
         public static readonly AppIconFieldType AppIconIosAppIcon44x44_2x
@@ -238,7 +238,7 @@ namespace Build.Shared.Types
                                         {"scale", "2x"},
                                         { "role", "longLook" },
                                         { "subtype", "42mm" },
-                                        { "osFileName", "AppIcon44x44@2x.png" }
+                                        { "filename", "AppIcon44x44@2x.png" }
                                     }, 88);
 
         public static readonly AppIconFieldType AppIconIosAppIcon86x86_2x
@@ -249,7 +249,7 @@ namespace Build.Shared.Types
                                         {"scale", "2x"},
                                         { "role", "quickLook" },
                                         { "subtype", "38mm" },
-                                        { "osFileName", "AppIcon86x86@2x.png" }
+                                        { "filename", "AppIcon86x86@2x.png" }
                                     }, 172);
 
         public static readonly AppIconFieldType AppIconIosAppIcon98x98_2x
@@ -260,7 +260,7 @@ namespace Build.Shared.Types
                                         {"scale", "2x"},
                                         { "role", "quickLook" },
                                         { "subtype", "42mm" },
-                                        { "osFileName", "AppIcon98x98@2x.png" }
+                                        { "filename", "AppIcon98x98@2x.png" }
                                     }, 196);
 
         public static readonly AppIconFieldType AppIconIosAppIcon24x24_2x
@@ -271,7 +271,7 @@ namespace Build.Shared.Types
                                         {"scale", "2x"},
                                         { "role", "notificationCenter" },
                                         { "subtype", "38mm" },
-                                        { "osFileName", "AppIcon24x24@2x.png" }
+                                        { "filename", "AppIcon24x24@2x.png" }
                                     }, 48);
 
         public static readonly AppIconFieldType AppIcon27_5x27_5_2x
@@ -282,7 +282,7 @@ namespace Build.Shared.Types
                                         {"scale", "2x"},
                                         { "role", "notificationCenter" },
                                         { "subtype", "42mm" },
-                                        { "osFileName", "AppIcon27.5x27.5@2x.png" }
+                                        { "filename", "AppIcon27.5x27.5@2x.png" }
                                     }, 55);
 
         public static readonly AppIconFieldType AppIcon29x29_2x
@@ -292,7 +292,7 @@ namespace Build.Shared.Types
                                         {"idiom", "watch"},
                                         {"scale", "2x"},
                                         { "role", "companionSettings" },
-                                        { "osFileName", "AppIcon29x29@2x.png" }
+                                        { "filename", "AppIcon29x29@2x.png" }
                                     }, 58);
 
         public static readonly AppIconFieldType AppIcon29x29_3x
@@ -302,7 +302,7 @@ namespace Build.Shared.Types
                                         {"idiom", "watch"},
                                         {"scale", "3x"},
                                         { "role", "companionSettings" },
-                                        { "osFileName", "AppIcon29x29@3x.png" }
+                                        { "filename", "AppIcon29x29@3x.png" }
                                     }, 87);
 
         #endregion
