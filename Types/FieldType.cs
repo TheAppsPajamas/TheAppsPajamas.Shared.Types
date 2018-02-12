@@ -77,7 +77,7 @@ namespace Build.Shared.Types
 
         public static readonly AppIconFieldType AppIconIosITunesArtwork_2x
             = new AppIconFieldType.Ios(-210, "Ios iTunesArtwork@2x", 30, true, true, false, AppIconIosMaster
-                , new Dictionary<string, string> { { "filename", "iTunesArtwork" } }, 1024);
+                , new Dictionary<string, string> { { "filename", "iTunesArtwork@2x" } }, 1024);
 
         public static readonly AppIconFieldType AppIconIosMarketingIcon
             = new AppIconFieldType.Ios(-215, "Ios marketing icon", 40, true, true, false, AppIconIosMaster
