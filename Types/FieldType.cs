@@ -620,9 +620,63 @@ namespace Build.Shared.Types
 
         #region SplashIos
         //TODO this might need a scale type / crop or strech, because these ones would need to shrink down to aspect ratio lower to get to @1x (for example)
-        public static readonly SplashFieldType SplashIosStoryboard_3x
+        public static readonly SplashFieldType SplashIosStoryboard
             = new SplashFieldType.Ios(value: -3600, displayName: "Ios launch storyboard portrait splash screen"
                 , order: 10, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , mediaOrientationType: MediaOrientationType.Portrait
+                , inheritsFromDefault: SplashSharedMaster
+                , metadata: new Dictionary<string, string>{
+                         { "idiom" , "universal" },
+                         { "scale" , "1x" },
+                         { "filename" , "StoryboardLaunchImage-Portrait.png"},
+                         { "CataloguePackagingFieldId", PackagingIosLaunchStoryboardPortraitXcAssetsName.Value.ToString() }
+                }, width: 2048, height: 2048);
+
+        public static readonly SplashFieldType SplashIosMasterLand
+            = new SplashFieldType.Ios(value: -3605, displayName: "Ios launch storyboard landscape splash screen"
+                , order: 20, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , mediaOrientationType: MediaOrientationType.Landscape
+                , inheritsFromDefault: SplashSharedMasterLand
+                //filename specified by packaging
+                , metadata: new Dictionary<string, string>{
+                         { "idiom" , "universal" },
+                         { "scale" , "1x" },
+                         { "filename" , "StoryboardLaunchImage-Landscape.png"},
+                         { "CataloguePackagingFieldId", PackagingIosLaunchStoryboardLandscapeXcAssetsName.Value.ToString() }
+                }, width: 2048, height: 2048);
+
+
+        public static readonly SplashFieldType SplashIosStoryboard_2x
+            = new SplashFieldType.Ios(value: -3610, displayName: "Ios launch@2x storyboard portrait splash screen"
+                , order: 30, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , mediaOrientationType: MediaOrientationType.Portrait
+                , inheritsFromDefault: SplashSharedMaster
+                , metadata: new Dictionary<string, string>{
+                         { "idiom" , "universal" },
+                         { "scale" , "2x" },
+                         { "filename" , "StoryboardLaunchImage-Portrait@2x.png"},
+                         { "CataloguePackagingFieldId", PackagingIosLaunchStoryboardPortraitXcAssetsName.Value.ToString() }
+                }, width: 2048, height: 2048);
+
+        public static readonly SplashFieldType SplashIosMasterLand_2x
+            = new SplashFieldType.Ios(value: -3615, displayName: "Ios launch@2x storyboard landscape splash screen"
+                , order: 40, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , mediaOrientationType: MediaOrientationType.Landscape
+                , inheritsFromDefault: SplashSharedMasterLand
+                //filename specified by packaging
+                , metadata: new Dictionary<string, string>{
+                         { "idiom" , "universal" },
+                         { "scale" , "2x" },
+                         { "filename" , "StoryboardLaunchImage-Landscape@2x.png"},
+                         { "CataloguePackagingFieldId", PackagingIosLaunchStoryboardLandscapeXcAssetsName.Value.ToString() }
+                }, width: 2048, height: 2048);
+
+
+
+
+        public static readonly SplashFieldType SplashIosStoryboard_3x
+            = new SplashFieldType.Ios(value: -3620, displayName: "Ios launch@3x storyboard portrait splash screen"
+                , order: 50, isForClient: true, isProdReady: true, defaultToDisabled: false
                 , mediaOrientationType: MediaOrientationType.Portrait
                 , inheritsFromDefault: SplashSharedMaster
                 , metadata: new Dictionary<string, string>{
@@ -633,8 +687,8 @@ namespace Build.Shared.Types
                 }, width: 2048, height: 2048);
 
         public static readonly SplashFieldType SplashIosMasterLand_3x
-            = new SplashFieldType.Ios(value: -3605, displayName: "Ios launch storyboard landscape splash screen"
-                , order: 20, isForClient: true, isProdReady: true, defaultToDisabled: false
+            = new SplashFieldType.Ios(value: -3625, displayName: "Ios launch@3x storyboard landscape splash screen"
+                , order: 60, isForClient: true, isProdReady: true, defaultToDisabled: false
                 , mediaOrientationType: MediaOrientationType.Landscape
                 , inheritsFromDefault: SplashSharedMasterLand
                 //filename specified by packaging
