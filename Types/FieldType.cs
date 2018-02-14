@@ -641,7 +641,7 @@ namespace Build.Shared.Types
         
         public static readonly SplashFieldType SplashIosStoryboard_Universal
             = new SplashFieldType.Ios(value: -3610, displayName: "Ios launch storyboard (universal, iPhone 5) portrait splash screen"
-                , order: 10, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , order: 30, isForClient: true, isProdReady: true, defaultToDisabled: false
                 , mediaOrientationType: MediaOrientationType.Portrait
                 , inheritsFromDefault: SplashIosMaster
                 , metadata: new Dictionary<string, string>{
@@ -654,7 +654,7 @@ namespace Build.Shared.Types
 
         public static readonly SplashFieldType SplashIosStoryboard_Universal2x
             = new SplashFieldType.Ios(value: -3615, displayName: "Ios launch@2x storyboard (universal, iPhone 6) portrait splash screen"
-                , order: 30, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , order: 40, isForClient: true, isProdReady: true, defaultToDisabled: false
                 , mediaOrientationType: MediaOrientationType.Portrait
                 , inheritsFromDefault: SplashIosMaster
                 , metadata: new Dictionary<string, string>{
@@ -678,7 +678,7 @@ namespace Build.Shared.Types
 
         public static readonly SplashFieldType SplashIosStoryboardIphone
             = new SplashFieldType.Ios(value: -3630, displayName: "Ios launch storyboard (iPhone, iPhone 5) portrait splash screen"
-                , order: 10, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , order: 60, isForClient: true, isProdReady: true, defaultToDisabled: false
                 , mediaOrientationType: MediaOrientationType.Portrait
                 , inheritsFromDefault: SplashIosMaster
                 , metadata: new Dictionary<string, string>{
@@ -690,7 +690,7 @@ namespace Build.Shared.Types
         
         public static readonly SplashFieldType SplashIosStoryboard_iPhone2x
             = new SplashFieldType.Ios(value: -3635, displayName: "Ios launch@2x storyboard (iPhone, iPhone 6) portrait splash screen"
-                , order: 30, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , order: 70, isForClient: true, isProdReady: true, defaultToDisabled: false
                 , mediaOrientationType: MediaOrientationType.Portrait
                 , inheritsFromDefault: SplashIosMaster
                 , metadata: new Dictionary<string, string>{
@@ -702,20 +702,20 @@ namespace Build.Shared.Types
 
         public static readonly SplashFieldType SplashIosStoryboard_R2x
             = new SplashFieldType.Ios(value: -3640, displayName: "Ios launch@2x storyboard (iPhone 4 retina) portrait splash screen"
-                , order: 50, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , order: 80, isForClient: true, isProdReady: true, defaultToDisabled: false
                 , mediaOrientationType: MediaOrientationType.Portrait
                 , inheritsFromDefault: SplashIosMaster
                 , metadata: new Dictionary<string, string>{
                          { "idiom" , "iphone" },
                          { "scale" , "2x" },
                          { "subtype", "retina4" },
-                         { "filename" , "StoryboardLaunchImage-Portrait@3x.png"},
+                         { "filename" , "StoryboardLaunchImage-R4-Portrait@2x~iphone.png"},
                          { "CataloguePackagingFieldId", PackagingIosLaunchStoryboardPortraitXcAssetsName.Value.ToString() }
                 }, width: 640, height: 960);
         
         public static readonly SplashFieldType SplashIosStoryboard_Iphone3x
             = new SplashFieldType.Ios(value: -3645, displayName: "Ios launch@3x storyboard (iPhone, iPhone 6 plus) portrait splash screen"
-                , order: 50, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , order: 90, isForClient: true, isProdReady: true, defaultToDisabled: false
                 , mediaOrientationType: MediaOrientationType.Portrait
                 , inheritsFromDefault: SplashIosMaster
                 , metadata: new Dictionary<string, string>{
@@ -727,7 +727,7 @@ namespace Build.Shared.Types
 
         public static readonly SplashFieldType SplashIosStoryboard_Ipad1x
             = new SplashFieldType.Ios(value: -3650, displayName: "Ios launch@1x storyboard (iPad) portrait splash screen"
-                , order: 50, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , order: 100, isForClient: true, isProdReady: true, defaultToDisabled: false
                 , mediaOrientationType: MediaOrientationType.Portrait
                 , inheritsFromDefault: SplashIosMaster
                 , metadata: new Dictionary<string, string>{
@@ -739,7 +739,7 @@ namespace Build.Shared.Types
 
         public static readonly SplashFieldType SplashIosStoryboard_Ipad2x
             = new SplashFieldType.Ios(value: -3655, displayName: "Ios launch@2x storyboard (iPad) portrait splash screen"
-                , order: 50, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , order: 110, isForClient: true, isProdReady: true, defaultToDisabled: false
                 , mediaOrientationType: MediaOrientationType.Portrait
                 , inheritsFromDefault: SplashIosMaster
                 , metadata: new Dictionary<string, string>{
@@ -755,7 +755,7 @@ namespace Build.Shared.Types
         #region SplashIosImageSetLandscape
         public static readonly SplashFieldType SplashIosStoryboardLand_Universal
             = new SplashFieldType.Ios(value: -3900, displayName: "Ios launch storyboard (universal) landscape splash screen"
-                , order: 20, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , order: 200, isForClient: true, isProdReady: true, defaultToDisabled: false
                 , mediaOrientationType: MediaOrientationType.Landscape
                 , inheritsFromDefault: SplashIosMasterLand
                 //filename specified by packaging
@@ -768,7 +768,7 @@ namespace Build.Shared.Types
 
         public static readonly SplashFieldType SplashIosStoryboardLand_Universal2x
             = new SplashFieldType.Ios(value: -3905, displayName: "Ios launch@2x storyboard (universal) landscape splash screen"
-                , order: 40, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , order: 210, isForClient: true, isProdReady: true, defaultToDisabled: false
                 , mediaOrientationType: MediaOrientationType.Landscape
                 , inheritsFromDefault: SplashIosMasterLand
                 //filename specified by packaging
@@ -781,7 +781,7 @@ namespace Build.Shared.Types
 
         public static readonly SplashFieldType SplashIosStoryboardLand_Universal3x
             = new SplashFieldType.Ios(value: -3910, displayName: "Ios launch@3x storyboard (universal) landscape splash screen"
-                , order: 60, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , order: 220, isForClient: true, isProdReady: true, defaultToDisabled: false
                 , mediaOrientationType: MediaOrientationType.Landscape
                 , inheritsFromDefault: SplashIosMasterLand
                 //filename specified by packaging
@@ -794,7 +794,7 @@ namespace Build.Shared.Types
 
         public static readonly SplashFieldType SplashIosStoryboardIphoneLand
             = new SplashFieldType.Ios(value: -3915, displayName: "Ios launch storyboard (iPhone, iPhone 5) landscape splash screen"
-                , order: 10, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , order: 230, isForClient: true, isProdReady: true, defaultToDisabled: false
                 , mediaOrientationType: MediaOrientationType.Landscape
                 , inheritsFromDefault: SplashIosMaster
                 , metadata: new Dictionary<string, string>{
@@ -806,7 +806,7 @@ namespace Build.Shared.Types
 
         public static readonly SplashFieldType SplashIosStoryboardLand_iPhone2x
             = new SplashFieldType.Ios(value: -3920, displayName: "Ios launch@2x storyboard (iPhone, iPhone 6) landscape splash screen"
-                , order: 30, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , order: 240, isForClient: true, isProdReady: true, defaultToDisabled: false
                 , mediaOrientationType: MediaOrientationType.Landscape
                 , inheritsFromDefault: SplashIosMaster
                 , metadata: new Dictionary<string, string>{
@@ -818,7 +818,7 @@ namespace Build.Shared.Types
 
         public static readonly SplashFieldType SplashIosStoryboardLand_R2x
             = new SplashFieldType.Ios(value: -3925, displayName: "Ios launch@2x storyboard (iPhone 4 retina) landscape splash screen"
-                , order: 50, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , order: 250, isForClient: true, isProdReady: true, defaultToDisabled: false
                 , mediaOrientationType: MediaOrientationType.Landscape
                 , inheritsFromDefault: SplashIosMaster
                 , metadata: new Dictionary<string, string>{
@@ -831,7 +831,7 @@ namespace Build.Shared.Types
 
         public static readonly SplashFieldType SplashIosStoryboardLand_Iphone3x
             = new SplashFieldType.Ios(value: -3930, displayName: "Ios launch@3x storyboard (iPhone, iPhone 6 plus) landscape splash screen"
-                , order: 50, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , order: 260, isForClient: true, isProdReady: true, defaultToDisabled: false
                 , mediaOrientationType: MediaOrientationType.Landscape
                 , inheritsFromDefault: SplashIosMaster
                 , metadata: new Dictionary<string, string>{
@@ -843,7 +843,7 @@ namespace Build.Shared.Types
 
         public static readonly SplashFieldType SplashIosStoryboardLand_Ipad1x
             = new SplashFieldType.Ios(value: -3940, displayName: "Ios launch@1x storyboard (iPad) landscape splash screen"
-                , order: 50, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , order: 270, isForClient: true, isProdReady: true, defaultToDisabled: false
                 , mediaOrientationType: MediaOrientationType.Landscape
                 , inheritsFromDefault: SplashIosMaster
                 , metadata: new Dictionary<string, string>{
@@ -855,7 +855,7 @@ namespace Build.Shared.Types
 
         public static readonly SplashFieldType SplashIosStoryboardLand_Ipad2x
             = new SplashFieldType.Ios(value: -3950, displayName: "Ios launch@2x storyboard (iPad) portrait splash screen"
-                , order: 50, isForClient: true, isProdReady: true, defaultToDisabled: false
+                , order: 280, isForClient: true, isProdReady: true, defaultToDisabled: false
                 , mediaOrientationType: MediaOrientationType.Landscape
                 , inheritsFromDefault: SplashIosMaster
                 , metadata: new Dictionary<string, string>{
@@ -909,7 +909,7 @@ namespace Build.Shared.Types
                      { "size", "320x480" },
                      { "scale", "2x" },
                      { "idiom", "iphone" }
-                 }, width: 320, height: 480);
+                 }, width: 640, height: 960);
 
         public static readonly SplashFieldType SplashIos568h_2x
              = new SplashFieldType.Ios(value: -3715, displayName: "Ios 568h@2x (iPhone Retina 4 inch) portrait splash screen"
@@ -1043,9 +1043,10 @@ namespace Build.Shared.Types
                  , metadata: new Dictionary<string, string>{
                      { "orientation" , "portrait" },
                      { "idiom" , "ipad" },
-                     { "filename" , "LaunchImage~ipad.png" },
+                     { "filename" , "LaunchImageNoStatusBar~ipad.png" },
                      { "extent" , "to-status-bar" },
                      { "minimum-system-version", "7.0" },
+                     { "size", "768x1004" },
                      { "scale" , "1x" }
                  }, width: 768, height: 1004);
 
@@ -1057,9 +1058,10 @@ namespace Build.Shared.Types
                  , metadata: new Dictionary<string, string>{
                      { "orientation" , "portrait" },
                      { "idiom" , "iphone" },
-                     { "filename" , "LaunchImage@2x~ipad.png" },
+                     { "filename" , "LaunchImageNoStatusBar@2x~ipad.png" },
                      { "minimum-system-version", "7.0" },
-                     { "extent" , "full-screen" },
+                     { "extent" , "to-status-bar" },
+                     { "size", "768x1004" },
                      { "scale" , "2x" }
                  }, width: 1536, height: 2008);
 
