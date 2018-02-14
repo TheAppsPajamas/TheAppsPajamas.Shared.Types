@@ -627,7 +627,9 @@ namespace Build.Shared.Types
                 , inheritsFromDefault: SplashSharedMaster
                 , metadata: new Dictionary<string, string>{
                          { "idiom" , "universal" },
-                         { "scale" , "3x" }
+                         { "scale" , "3x" },
+                         { "filename" , "StoryboardLaunchImage-Portrait@3x.png"},
+                         { "CataloguePackagingFieldId", PackagingIosLaunchStoryboardPortraitXcAssetsName.Value.ToString() }
                 }, width: 2048, height: 2048);
 
         public static readonly SplashFieldType SplashIosMasterLand_3x
@@ -638,7 +640,9 @@ namespace Build.Shared.Types
                 //filename specified by packaging
                 , metadata: new Dictionary<string, string>{
                          { "idiom" , "universal" },
-                         { "scale" , "3x" }
+                         { "scale" , "3x" },
+                         { "filename" , "StoryboardLaunchImage-Landscape@3x.png"},
+                         { "CataloguePackagingFieldId", PackagingIosLaunchStoryboardLandscapeXcAssetsName.Value.ToString() }
                 }, width: 2048, height: 2048);
 
         #endregion
@@ -681,7 +685,7 @@ namespace Build.Shared.Types
                      { "minimum-system-version", "7.0" },
                      { "orientation", "portrait" },
                      { "extent", "full-screen" },
-                     { "fileName", "LaunchImage-700-Portrait@2x~iphone.png" },
+                     { "filename", "LaunchImage-700-Portrait@2x~iphone.png" },
                      { "size", "320x480" },
                      { "scale", "2x" },
                      { "idiom", "iphone" }
@@ -696,7 +700,7 @@ namespace Build.Shared.Types
                      { "minimum-system-version", "7.0" },
                      { "orientation", "portrait" },
                      { "extent", "full-screen" },
-                     { "fileName", "LaunchImage-Portrait-568h@2x.png" },
+                     { "filename", "LaunchImage-Portrait-568h@2x.png" },
                      { "size", "320x568" },
                      { "subtype", "retina4" },
                      { "scale", "2x" },
@@ -711,7 +715,7 @@ namespace Build.Shared.Types
                  , metadata: new Dictionary<string, string>{
                      { "orientation", "portrait" },
                      { "extent", "full-screen" },
-                     { "fileName", "LaunchImage-Portrait-568h@3x.png" },
+                     { "filename", "LaunchImage-Portrait-568h@3x.png" },
                      { "size", "320x568" },
                      { "subtype", "retina4" },
                      { "scale", "2x" },
@@ -868,7 +872,7 @@ namespace Build.Shared.Types
                  , metadata: new Dictionary<string, string>{
                      { "minimum-system-version", "8.0" },
                      { "orientation" , "landscape" },
-                     { "idiom" , "ipad" },
+                     { "idiom" , "iphone" },
                      { "size", "736x414" },
                      { "filename" , "LaunchImage-800-Landscape-736h@3x.png" },
                      { "extent" , "full-screen" },
