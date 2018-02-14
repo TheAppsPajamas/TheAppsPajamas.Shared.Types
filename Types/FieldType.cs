@@ -736,7 +736,7 @@ namespace Build.Shared.Types
                      { "subtype", "667h" },
                      { "scale", "2x" },
                      { "idiom", "iphone" }
-                 }, width: 750, height: 1134);
+                 }, width: 750, height: 1334);
 
         public static readonly SplashFieldType SplashIos736h_3x
              = new SplashFieldType.Ios(value: -3730, displayName: "Ios 736h@3x (iPhone 6plus) portrait splash screen"
