@@ -1045,7 +1045,7 @@ namespace Build.Shared.Types
                      { "idiom" , "ipad" },
                      { "filename" , "LaunchImageNoStatusBar~ipad.png" },
                      { "extent" , "to-status-bar" },
-                     { "minimum-system-version", "7.0" },
+                     //{ "minimum-system-version", "7.0" },
                      { "size", "768x1004" },
                      { "scale" , "1x" }
                  }, width: 768, height: 1004);
@@ -1057,9 +1057,9 @@ namespace Build.Shared.Types
                  , inheritsFromDefault: SplashIosMaster
                  , metadata: new Dictionary<string, string>{
                      { "orientation" , "portrait" },
-                     { "idiom" , "iphone" },
+                     { "idiom" , "ipad" },
                      { "filename" , "LaunchImageNoStatusBar@2x~ipad.png" },
-                     { "minimum-system-version", "7.0" },
+                     //{ "minimum-system-version", "7.0" },
                      { "extent" , "to-status-bar" },
                      { "size", "768x1004" },
                      { "scale" , "2x" }
@@ -1128,9 +1128,6 @@ namespace Build.Shared.Types
                      { "extent" , "full-screen" },
                      { "scale" , "2x" }
                  }, width: 2048, height: 1536);
-
-
-
 
         public static readonly SplashFieldType SplashIosIpad700Land_2x
              = new SplashFieldType.Ios(value: -3815, displayName: "Ios iPad@2x (iOS 7-10) landscape splash screen"
