@@ -854,7 +854,7 @@ namespace Build.Shared.Types
                 }, width: 1024, height: 768);
 
         public static readonly SplashFieldType SplashIosStoryboardLand_Ipad2x
-            = new SplashFieldType.Ios(value: -3950, displayName: "Ios launch@2x storyboard (iPad) portrait splash screen"
+            = new SplashFieldType.Ios(value: -3950, displayName: "Ios launch@2x storyboard (iPad) landscape splash screen"
                 , order: 280, isForClient: true, isProdReady: true, defaultToDisabled: false
                 , mediaOrientationType: MediaOrientationType.Landscape
                 , inheritsFromDefault: SplashIosMaster
@@ -1051,7 +1051,7 @@ namespace Build.Shared.Types
                  }, width: 768, height: 1004);
 
         public static readonly SplashFieldType SplashIosIpad_2xNoStatusBar
-             = new SplashFieldType.Ios(value: -3760, displayName: "Ios iPad@2x portrait splash screen"
+             = new SplashFieldType.Ios(value: -3760, displayName: "Ios iPad@2x portrait without status bar splash screen"
                  , order: 150, isForClient: true, isProdReady: true, defaultToDisabled: false
                  , mediaOrientationType: MediaOrientationType.Portrait
                  , inheritsFromDefault: SplashIosMaster
