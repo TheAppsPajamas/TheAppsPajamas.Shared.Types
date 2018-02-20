@@ -341,7 +341,7 @@ namespace Build.Shared.Types
         public static PackagingFieldType PackagingIosVersionNumber
             = new PackagingFieldType(-1215, "Ios version number", ProjectType.Ios, 40, true, true, false, PackagingSharedVersionNumber, StringFieldDisplayType.Number, String.Empty);
         public static PackagingFieldType PackagingIosAssetCatalogueName
-            = new PackagingFieldType(-1220, "Ios asset catalogue name", ProjectType.Ios, 50, true, true, false, null, StringFieldDisplayType.Text, "theappspajamas");
+            = new PackagingFieldType(-1220, "Ios asset catalogue name", ProjectType.Ios, 50, true, true, false, null, StringFieldDisplayType.Text, "Tap");
 
         public static PackagingFieldType PackagingIosAppIconXcAssetsName
             = new PackagingFieldType(-1225, "Ios app icon xcassets name", ProjectType.Ios, 60, true, true, false, null, StringFieldDisplayType.Text, "AppIcon");
