@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Build.Shared.Types
+namespace TheAppsPajamas.Shared.Types
 {
     public static class FieldTypeHelpers
     {

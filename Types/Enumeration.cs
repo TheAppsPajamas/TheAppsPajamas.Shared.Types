@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization;
 
-namespace Build.Shared.Types
+namespace TheAppsPajamas.Shared.Types
 {
     
     [DebuggerDisplay("{DisplayName} - {Value}")]

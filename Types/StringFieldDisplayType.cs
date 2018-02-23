@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Build.Shared.Types
+namespace TheAppsPajamas.Shared.Types
 {
     public class StringFieldDisplayType : Enumeration<StringFieldDisplayType>
     {
