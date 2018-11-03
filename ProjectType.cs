@@ -6,6 +6,7 @@ namespace TheAppsPajamas.Shared.Types
 {
     public class ProjectType : Enumeration<ProjectType>
     {
+        public static readonly ProjectType Undefined = new ProjectType(0, "Undefined");
         public static readonly ProjectType Shared = new ProjectType(1, "Shared");
         public static readonly ProjectType Droid = new ProjectType(2, "Droid");
         public static readonly ProjectType Ios = new ProjectType(3, "Ios");
