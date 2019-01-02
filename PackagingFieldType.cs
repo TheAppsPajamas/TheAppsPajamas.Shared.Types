@@ -7,7 +7,7 @@ namespace TheAppsPajamas.Shared.Types
     public class PackagingFieldType : StringFieldType
     {
 
-        public PackagingFieldType(int value
+        public PackagingFieldType(string value
             , string displayName
             , ProjectType projectType
             , int order
@@ -23,7 +23,7 @@ namespace TheAppsPajamas.Shared.Types
 
         public class Shared : PackagingFieldType
         {
-            public Shared(int value
+            public Shared(string value
                 , string displayName
                 , int order
                 , bool isForClient
@@ -39,7 +39,7 @@ namespace TheAppsPajamas.Shared.Types
 
         public class Droid : PackagingFieldType
         {
-            public Droid(int value
+            public Droid(string value
                 , string displayName
                 , int order
                 , bool isForClient
@@ -55,7 +55,7 @@ namespace TheAppsPajamas.Shared.Types
 
         public class Ios : PackagingFieldType
         {
-            public Ios(int value
+            public Ios(string value
                 , string displayName
                 , int order
                 , bool isForClient

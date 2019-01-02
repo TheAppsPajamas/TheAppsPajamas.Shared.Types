@@ -10,7 +10,7 @@ namespace TheAppsPajamas.Shared.Types
         
         public virtual int Height { get; }
         
-        public MediaFieldType(int value
+        public MediaFieldType(string value
             , string displayName
             , ProjectType projectType
             , FieldHolderType fieldHolderType

@@ -6,7 +6,7 @@ namespace TheAppsPajamas.Shared.Types
 {
     public class BuildConfigRecordSetFieldType : StringFieldType
     {
-        public BuildConfigRecordSetFieldType(int value
+        public BuildConfigRecordSetFieldType(string value
             , string displayName
             , ProjectType projectType
             , int order
@@ -20,7 +20,7 @@ namespace TheAppsPajamas.Shared.Types
 
         public class Shared : BuildConfigRecordSetFieldType
         {
-            public Shared(int value
+            public Shared(string value
                 , string displayName
                 , int order
                 , bool isForClient
