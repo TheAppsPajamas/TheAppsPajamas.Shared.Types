@@ -6,7 +6,7 @@ namespace TheAppsPajamas.Shared.Types
 {
     public class AppIconFieldType : MediaFieldType
     {
-        public AppIconFieldType(int value
+        public AppIconFieldType(string value
             , string displayName
             , ProjectType projectType
             , int order
@@ -32,7 +32,7 @@ namespace TheAppsPajamas.Shared.Types
 
         public class Shared : AppIconFieldType
         {
-            public Shared(int value
+            public Shared(string value
             , string displayName
             , int order
             , bool isForClient
@@ -57,7 +57,7 @@ namespace TheAppsPajamas.Shared.Types
 
         public class Droid : AppIconFieldType
         {
-            public Droid(int value
+            public Droid(string value
                 , string displayName
                 , int order
                 , bool isForClient
@@ -82,7 +82,7 @@ namespace TheAppsPajamas.Shared.Types
 
         public class Ios : AppIconFieldType
         {
-            public Ios(int value
+            public Ios(string value
                 , string displayName
                 , int order
                 , bool isForClient

@@ -6,13 +6,10 @@ namespace TheAppsPajamas.Shared.Types
 {
     public class StringFieldType : FieldType
     {
-        private StringFieldDisplayType _fieldDisplayType;
-        public StringFieldDisplayType FieldDisplayType { get { return _fieldDisplayType; } }
-        
-        private string _defaultValue;
-        public string DefaultValue {  get { return _defaultValue; } }
+        public StringFieldDisplayType FieldDisplayType { get; }
+        public string DefaultValue { get; }
 
-        public StringFieldType(int value
+        public StringFieldType(string value
             , string displayName
             , ProjectType projectType
             , FieldHolderType fieldHolderType
@@ -24,8 +21,8 @@ namespace TheAppsPajamas.Shared.Types
             , StringFieldDisplayType fieldDisplayType
             , string defaultValue) : base(value, displayName, projectType, fieldHolderType, order, isForClient, isProdReady, defaultToDisabled, inheritsFromDefault)
         {
-            _fieldDisplayType = fieldDisplayType;
-            _defaultValue = defaultValue;
+            FieldDisplayType = fieldDisplayType;
+            DefaultValue = defaultValue;
         }
 
     }

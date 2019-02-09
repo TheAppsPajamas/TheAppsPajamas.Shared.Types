@@ -6,10 +6,9 @@ namespace TheAppsPajamas.Shared.Types
 {
     public class SplashFieldType : MediaFieldType
     {
-        private MediaOrientationType _mediaOrientationType;
-        public MediaOrientationType MediaOrientationType {  get { return _mediaOrientationType;  } }
-        
-        public SplashFieldType(int value
+        public MediaOrientationType MediaOrientationType { get; }
+
+        public SplashFieldType(string value
             , string displayName
             , ProjectType projectType
             , int order
@@ -34,12 +33,12 @@ namespace TheAppsPajamas.Shared.Types
                       , width: width
                       , height: height)
         {
-            _mediaOrientationType = mediaOrientationType;
+            MediaOrientationType = mediaOrientationType;
         }
 
         public class Shared : SplashFieldType
         {
-            public Shared(int value
+            public Shared(string value
                 , string displayName
                 , int order
                 , bool isForClient
@@ -68,7 +67,7 @@ namespace TheAppsPajamas.Shared.Types
 
         public class Droid : SplashFieldType
         {
-            public Droid(int value
+            public Droid(string value
                 , string displayName
                 , int order
                 , bool isForClient
@@ -97,7 +96,7 @@ namespace TheAppsPajamas.Shared.Types
 
         public class Ios : SplashFieldType
         {
-            public Ios(int value
+            public Ios(string value
                 , string displayName
                 , int order
                 , bool isForClient

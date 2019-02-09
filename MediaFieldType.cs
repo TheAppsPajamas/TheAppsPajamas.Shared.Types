@@ -6,13 +6,11 @@ namespace TheAppsPajamas.Shared.Types
 {
     public class MediaFieldType : FieldType
     {
-        private int _width;
-        public virtual int Width { get { return _width; } }
-
-        private int _height;
-        public virtual int Height { get { return _height; } }
+        public virtual int Width { get; }
         
-        public MediaFieldType(int value
+        public virtual int Height { get; }
+        
+        public MediaFieldType(string value
             , string displayName
             , ProjectType projectType
             , FieldHolderType fieldHolderType
@@ -25,14 +23,14 @@ namespace TheAppsPajamas.Shared.Types
             , int width
             , int height = 0) : base(value, displayName, projectType, fieldHolderType, order, isForClient, isProdReady, defaultToDisabled, inheritsFromDefault, metadata)
         {
-            _width = width;
+            Width = width;
             if (height == 0)
             {
-                _height = width;
+                Height = width;
             }
             else
             {
-                _height = height;
+                Height = height;
             }
         }
 
