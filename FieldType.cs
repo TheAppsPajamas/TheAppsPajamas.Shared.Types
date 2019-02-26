@@ -346,10 +346,10 @@ namespace TheAppsPajamas.Shared.Types
 
         #endregion
 
-        #region BuildConfig
+        #region BuildConfigRecordSet
 
         public static BuildConfigRecordSetFieldType BuildConfigFieldSetCompilerConstants
-            = new BuildConfigRecordSetFieldType("2000", "Compiler constants", ProjectType.Shared, 10, true, true, false, StringFieldDisplayType.Text, String.Empty);
+            = new BuildConfigRecordSetFieldType("2000", "Compiler constants", ProjectType.Shared, 10, true, true, false, StringFieldDisplayType.Text, String.Empty, BuildConfigRecordSetFieldVersionType.Version1);
 
         #endregion
 

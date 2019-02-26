@@ -6,6 +6,8 @@ namespace TheAppsPajamas.Shared.Types
 {
     public class BuildConfigRecordSetFieldType : StringFieldType
     {
+        public BuildConfigRecordSetFieldVersionType BuildConfigRecordSetFieldVersionType { get; }
+
         public BuildConfigRecordSetFieldType(string value
             , string displayName
             , ProjectType projectType
@@ -14,7 +16,8 @@ namespace TheAppsPajamas.Shared.Types
             , bool isProdReady
             , bool defaultToDisabled
             , StringFieldDisplayType fieldDisplayType
-            , string defaultValue) : base(value, displayName, projectType, FieldHolderType.Packaging, order, isForClient, isProdReady, defaultToDisabled, null, fieldDisplayType, defaultValue)
+            , string defaultValue
+            , BuildConfigRecordSetFieldVersionType fieldVersionType) : base(value, displayName, projectType, FieldHolderType.Packaging, order, isForClient, isProdReady, defaultToDisabled, null, fieldDisplayType, defaultValue)
         {
         }
 
@@ -27,8 +30,9 @@ namespace TheAppsPajamas.Shared.Types
                 , bool isProdReady
                 , bool defaultToDisabled
                 , StringFieldDisplayType fieldDisplayType
-                , string defaultValue)
-                : base(value, displayName, ProjectType.Shared, order, isForClient, isProdReady, defaultToDisabled, fieldDisplayType, defaultValue)
+                , string defaultValue
+                , BuildConfigRecordSetFieldVersionType fieldVersionType)
+                : base(value, displayName, ProjectType.Shared, order, isForClient, isProdReady, defaultToDisabled, fieldDisplayType, defaultValue, fieldVersionType)
             {
             }
         }
