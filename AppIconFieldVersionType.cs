@@ -8,8 +8,8 @@ namespace TheAppsPajamas.Shared.Types
     {
         public static readonly AppIconFieldVersionType CurrentVersion = AppIconFieldVersionType.Version1;
 
-        public static readonly AppIconFieldVersionType Undefined = new AppIconFieldVersionType(1, "undefined", "undefined", "undefined");
-        public static readonly AppIconFieldVersionType Version1 = new AppIconFieldVersionType(2, "v1.0.0", "Version 1", "undefined");
+        public static readonly AppIconFieldVersionType Undefined = new AppIconFieldVersionType(0, "undefined", "undefined", "undefined");
+        public static readonly AppIconFieldVersionType Version1 = new AppIconFieldVersionType(1, "v1.0.0", "Version 1", "undefined");
         
         public AppIconFieldVersionType(int value, string displayName, string versionDescription, string versionLink) : base(value, displayName, versionDescription, versionLink)
         {

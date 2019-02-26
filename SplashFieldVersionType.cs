@@ -8,8 +8,8 @@ namespace TheAppsPajamas.Shared.Types
     {
         public static readonly SplashFieldVersionType CurrentVersion = SplashFieldVersionType.Version1;
 
-        public static readonly SplashFieldVersionType Undefined = new SplashFieldVersionType(1, "undefined", "undefined", "undefined");
-        public static readonly SplashFieldVersionType Version1 = new SplashFieldVersionType(2, "v1.0.0", "Splash Version 1", "undefined");
+        public static readonly SplashFieldVersionType Undefined = new SplashFieldVersionType(0, "undefined", "undefined", "undefined");
+        public static readonly SplashFieldVersionType Version1 = new SplashFieldVersionType(1, "v1.0.0", "Splash Version 1", "undefined");
         
         public SplashFieldVersionType(int value, string displayName, string versionDescription, string versionLink) : base(value, displayName, versionDescription, versionLink)
         {

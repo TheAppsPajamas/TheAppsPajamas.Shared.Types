@@ -4,9 +4,8 @@ using System.Text;
 
 namespace TheAppsPajamas.Shared.Types
 {
-    public class FieldVersionType : Enumeration<FieldVersionType>
+    public abstract class FieldVersionType : Enumeration<FieldVersionType>
     {
-
         public string VersionDescription { get; }
         public string VersionLink { get; }
 
