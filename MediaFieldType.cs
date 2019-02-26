@@ -14,6 +14,7 @@ namespace TheAppsPajamas.Shared.Types
             , string displayName
             , ProjectType projectType
             , FieldHolderType fieldHolderType
+            , FieldVersionType fieldVersionType
             , int order
             , bool isForClient
             , bool isProdReady
@@ -21,7 +22,18 @@ namespace TheAppsPajamas.Shared.Types
             , MediaFieldType inheritsFromDefault
             , Dictionary<string, string> metadata
             , int width
-            , int height = 0) : base(value, displayName, projectType, fieldHolderType, order, isForClient, isProdReady, defaultToDisabled, inheritsFromDefault, metadata)
+            , int height = 0
+            ) : base(value
+                , displayName
+                , projectType
+                , fieldHolderType
+                , fieldVersionType
+                , order
+                , isForClient
+                , isProdReady
+                , defaultToDisabled
+                , inheritsFromDefault
+                , metadata)
         {
             Width = width;
             if (height == 0)

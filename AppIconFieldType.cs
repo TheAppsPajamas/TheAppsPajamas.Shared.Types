@@ -9,17 +9,20 @@ namespace TheAppsPajamas.Shared.Types
         public AppIconFieldType(string value
             , string displayName
             , ProjectType projectType
+            , AppIconFieldVersionType fieldVersionType
             , int order
             , bool isForClient
             , bool isProdReady
             , bool defaultToDisabled
             , AppIconFieldType inheritsFromDefault
             , Dictionary<string, string> metadata
-            , int width) 
+            , int width
+            ) 
             : base(value: value
                   , displayName: displayName
                   , projectType: projectType
                   , fieldHolderType: FieldHolderType.AppIcon
+                  , fieldVersionType: fieldVersionType
                   , order: order
                   , isForClient: isForClient
                   , isProdReady: isProdReady
@@ -34,6 +37,7 @@ namespace TheAppsPajamas.Shared.Types
         {
             public Shared(string value
             , string displayName
+            , AppIconFieldVersionType fieldVersionType
             , int order
             , bool isForClient
             , bool isProdReady
@@ -44,6 +48,7 @@ namespace TheAppsPajamas.Shared.Types
             : base(value: value
                   , displayName: displayName
                   , projectType: ProjectType.Shared
+                  , fieldVersionType: fieldVersionType
                   , order: order
                   , isForClient: isForClient
                   , isProdReady: isProdReady
@@ -59,6 +64,7 @@ namespace TheAppsPajamas.Shared.Types
         {
             public Droid(string value
                 , string displayName
+                , AppIconFieldVersionType fieldVersionType
                 , int order
                 , bool isForClient
                 , bool isProdReady
@@ -69,6 +75,7 @@ namespace TheAppsPajamas.Shared.Types
                 : base(value: value
                       , displayName: displayName
                       , projectType: ProjectType.Droid
+                      , fieldVersionType: fieldVersionType
                       , order: order
                       , isForClient: isForClient
                       , isProdReady: isProdReady
@@ -84,6 +91,7 @@ namespace TheAppsPajamas.Shared.Types
         {
             public Ios(string value
                 , string displayName
+                , AppIconFieldVersionType fieldVersionType
                 , int order
                 , bool isForClient
                 , bool isProdReady
@@ -94,6 +102,7 @@ namespace TheAppsPajamas.Shared.Types
                 : base(value: value
                       , displayName: displayName
                       , projectType: ProjectType.Ios
+                      , fieldVersionType: fieldVersionType
                       , order: order
                       , isForClient: isForClient
                       , isProdReady: isProdReady

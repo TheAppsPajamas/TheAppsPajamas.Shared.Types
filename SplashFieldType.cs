@@ -11,6 +11,7 @@ namespace TheAppsPajamas.Shared.Types
         public SplashFieldType(string value
             , string displayName
             , ProjectType projectType
+            , SplashFieldVersionType fieldVersionType
             , int order
             , bool isForClient
             , bool isProdReady
@@ -24,6 +25,7 @@ namespace TheAppsPajamas.Shared.Types
                       , displayName: displayName
                       , projectType: projectType
                       , fieldHolderType: FieldHolderType.Splash
+                      , fieldVersionType: fieldVersionType
                       , order: order
                       , isForClient: isForClient
                       , isProdReady: isProdReady
@@ -40,6 +42,7 @@ namespace TheAppsPajamas.Shared.Types
         {
             public Shared(string value
                 , string displayName
+                , SplashFieldVersionType fieldVersionType
                 , int order
                 , bool isForClient
                 , bool isProdReady
@@ -52,6 +55,7 @@ namespace TheAppsPajamas.Shared.Types
                 : base(value: value
                       , displayName: displayName
                       , projectType: ProjectType.Shared
+                      , fieldVersionType: fieldVersionType
                       , order: order
                       , isForClient: isForClient
                       , isProdReady: isProdReady
@@ -69,6 +73,7 @@ namespace TheAppsPajamas.Shared.Types
         {
             public Droid(string value
                 , string displayName
+                , SplashFieldVersionType fieldVersionType
                 , int order
                 , bool isForClient
                 , bool isProdReady
@@ -81,6 +86,7 @@ namespace TheAppsPajamas.Shared.Types
                 : base(value: value
                       , displayName: displayName
                       , projectType: ProjectType.Droid
+                      , fieldVersionType: fieldVersionType
                       , order: order
                       , isForClient: isForClient
                       , isProdReady: isProdReady
@@ -98,6 +104,7 @@ namespace TheAppsPajamas.Shared.Types
         {
             public Ios(string value
                 , string displayName
+                , SplashFieldVersionType fieldVersionType
                 , int order
                 , bool isForClient
                 , bool isProdReady
@@ -110,6 +117,7 @@ namespace TheAppsPajamas.Shared.Types
                 : base(value: value
                       , displayName: displayName
                       , projectType: ProjectType.Ios
+                      , fieldVersionType: fieldVersionType
                       , order: order
                       , isForClient: isForClient
                       , isProdReady: isProdReady

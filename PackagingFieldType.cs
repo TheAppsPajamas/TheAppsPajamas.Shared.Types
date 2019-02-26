@@ -6,10 +6,10 @@ namespace TheAppsPajamas.Shared.Types
 {
     public class PackagingFieldType : StringFieldType
     {
-
         public PackagingFieldType(string value
             , string displayName
             , ProjectType projectType
+            , PackagingFieldVersionType fieldVersionType
             , int order
             , bool isForClient
             , bool isProdReady
@@ -17,7 +17,19 @@ namespace TheAppsPajamas.Shared.Types
             , PackagingFieldType inheritsFromDefault
             , StringFieldDisplayType fieldDisplayType
             , string defaultValue) 
-            : base(value, displayName, projectType, FieldHolderType.Packaging, order, isForClient, isProdReady, defaultToDisabled, inheritsFromDefault, fieldDisplayType, defaultValue)
+            : base(value
+                  , displayName
+                  , projectType
+                  , FieldHolderType.Packaging
+                  , fieldVersionType
+                  , order
+                  , isForClient
+                  , isProdReady
+                  , defaultToDisabled
+                  , inheritsFromDefault
+                  , fieldDisplayType
+                  , defaultValue
+                  )
         {
         }
 
@@ -25,6 +37,7 @@ namespace TheAppsPajamas.Shared.Types
         {
             public Shared(string value
                 , string displayName
+                , PackagingFieldVersionType fieldVersionType
                 , int order
                 , bool isForClient
                 , bool isProdReady
@@ -32,7 +45,17 @@ namespace TheAppsPajamas.Shared.Types
                 , PackagingFieldType inheritsFromDefault
                 , StringFieldDisplayType fieldDisplayType
                 , string defaultValue
-                ) : base(value, displayName, ProjectType.Shared, order, isForClient, isProdReady, defaultToDisabled, inheritsFromDefault, fieldDisplayType, defaultValue)
+                ) : base(value
+                    , displayName
+                    , ProjectType.Shared
+                    , fieldVersionType
+                    , order
+                    , isForClient
+                    , isProdReady
+                    , defaultToDisabled
+                    , inheritsFromDefault
+                    , fieldDisplayType
+                    , defaultValue)
             {
             }
         }
@@ -41,6 +64,7 @@ namespace TheAppsPajamas.Shared.Types
         {
             public Droid(string value
                 , string displayName
+                , PackagingFieldVersionType fieldVersionType
                 , int order
                 , bool isForClient
                 , bool isProdReady
@@ -48,7 +72,17 @@ namespace TheAppsPajamas.Shared.Types
                 , PackagingFieldType inheritsFromDefault
                 , StringFieldDisplayType fieldDisplayType
                 , string defaultValue
-                ) : base(value, displayName, ProjectType.Droid, order, isForClient, isProdReady, defaultToDisabled, inheritsFromDefault, fieldDisplayType, defaultValue)
+                ) : base(value
+                    , displayName
+                    , ProjectType.Shared
+                    , fieldVersionType
+                    , order
+                    , isForClient
+                    , isProdReady
+                    , defaultToDisabled
+                    , inheritsFromDefault
+                    , fieldDisplayType
+                    , defaultValue)
             {
             }
         }
@@ -57,14 +91,25 @@ namespace TheAppsPajamas.Shared.Types
         {
             public Ios(string value
                 , string displayName
+                , StringFieldDisplayType fieldDisplayType
+                , PackagingFieldVersionType fieldVersionType
                 , int order
                 , bool isForClient
                 , bool isProdReady
                 , bool defaultToDisabled
                 , PackagingFieldType inheritsFromDefault
-                , StringFieldDisplayType fieldDisplayType
                 , string defaultValue
-                ) : base(value, displayName, ProjectType.Ios, order, isForClient, isProdReady, defaultToDisabled, inheritsFromDefault, fieldDisplayType, defaultValue)
+                ) : base(value
+                    , displayName
+                    , ProjectType.Shared
+                    , fieldVersionType
+                    , order
+                    , isForClient
+                    , isProdReady
+                    , defaultToDisabled
+                    , inheritsFromDefault
+                    , fieldDisplayType
+                    , defaultValue)
             {
             }
         }

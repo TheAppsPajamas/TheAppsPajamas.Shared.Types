@@ -13,13 +13,23 @@ namespace TheAppsPajamas.Shared.Types
             , string displayName
             , ProjectType projectType
             , FieldHolderType fieldHolderType
+            , FieldVersionType fieldVersionType
             , int order
             , bool isForClient
             , bool isProdReady
             , bool defaultToDisabled
             , StringFieldType inheritsFromDefault
             , StringFieldDisplayType fieldDisplayType
-            , string defaultValue) : base(value, displayName, projectType, fieldHolderType, order, isForClient, isProdReady, defaultToDisabled, inheritsFromDefault)
+            , string defaultValue) : base(value
+                , displayName
+                , projectType
+                , fieldHolderType
+                , fieldVersionType
+                , order
+                , isForClient
+                , isProdReady
+                , defaultToDisabled
+                , inheritsFromDefault)
         {
             FieldDisplayType = fieldDisplayType;
             DefaultValue = defaultValue;

@@ -6,18 +6,28 @@ namespace TheAppsPajamas.Shared.Types
 {
     public class BuildConfigRecordSetFieldType : StringFieldType
     {
-        public BuildConfigRecordSetFieldVersionType BuildConfigRecordSetFieldVersionType { get; }
-
         public BuildConfigRecordSetFieldType(string value
             , string displayName
             , ProjectType projectType
+            , BuildConfigRecordSetFieldVersionType fieldVersionType
             , int order
             , bool isForClient
             , bool isProdReady
             , bool defaultToDisabled
             , StringFieldDisplayType fieldDisplayType
             , string defaultValue
-            , BuildConfigRecordSetFieldVersionType fieldVersionType) : base(value, displayName, projectType, FieldHolderType.Packaging, order, isForClient, isProdReady, defaultToDisabled, null, fieldDisplayType, defaultValue)
+            ) : base(value
+                , displayName
+                , projectType
+                , FieldHolderType.Packaging
+                , fieldVersionType
+                , order
+                , isForClient
+                , isProdReady
+                , defaultToDisabled
+                , null
+                , fieldDisplayType
+                , defaultValue)
         {
         }
 
@@ -25,14 +35,24 @@ namespace TheAppsPajamas.Shared.Types
         {
             public Shared(string value
                 , string displayName
+                , BuildConfigRecordSetFieldVersionType fieldVersionType
                 , int order
                 , bool isForClient
                 , bool isProdReady
                 , bool defaultToDisabled
                 , StringFieldDisplayType fieldDisplayType
                 , string defaultValue
-                , BuildConfigRecordSetFieldVersionType fieldVersionType)
-                : base(value, displayName, ProjectType.Shared, order, isForClient, isProdReady, defaultToDisabled, fieldDisplayType, defaultValue, fieldVersionType)
+                )
+                : base(value
+                      , displayName
+                      , ProjectType.Shared
+                      , fieldVersionType
+                      , order
+                      , isForClient
+                      , isProdReady
+                      , defaultToDisabled
+                      , fieldDisplayType
+                      , defaultValue)
             {
             }
         }
