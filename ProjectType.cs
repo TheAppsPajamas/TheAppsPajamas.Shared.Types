@@ -10,6 +10,7 @@ namespace TheAppsPajamas.Shared.Types
         public static readonly ProjectType Shared = new ProjectType(1, "Shared", 0);
         public static readonly ProjectType Droid = new ProjectType(2, "Droid", 1);
         public static readonly ProjectType Ios = new ProjectType(3, "Ios", 2);
+        public static readonly ProjectType Library = new ProjectType(4, "Library", 3);
 
         public ProjectType(int value, string displayName, int order) : base(value, displayName) {
             Order = order;
